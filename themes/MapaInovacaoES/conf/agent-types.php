@@ -794,7 +794,7 @@ return array(
         ),
     ),
     'items' => array(
-        1 => array( 'name' => \MapasCulturais\i::__('Individual' )),
-        2 => array( 'name' => \MapasCulturais\i::__('Coletivo') ),
+        1 => array( 'name' => \MapasCulturais\i::__('Pessoa Física' )),
+        2 => array( 'name' => \MapasCulturais\i::__('Pessoa Jurídica') ),
     )
 );

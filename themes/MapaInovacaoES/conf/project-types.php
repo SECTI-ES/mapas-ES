@@ -6,16 +6,6 @@
  * See https://github.com/Respect/Validation to know how to write validations
  */
 
-function compareNamesProject($a, $b){
-    return strcmp($a['name'], $b['name']);
-}
-
-$items = array(
-    1 =>  array( 'name' => \MapasCulturais\i::__("4"))
-);
-
-uasort($items, 'compareNamesProject');
-
 return array(
     'metadata' => array(
         'site' => array(
@@ -174,7 +164,39 @@ return array(
         ),
 
     ),
-    'items' => $items,
+    'items' => array(
+        1 =>  array( 'name' => \MapasCulturais\i::__("Festival")),
+        2 =>  array( 'name' => \MapasCulturais\i::__("Encontro")),
+        3 =>  array( 'name' => \MapasCulturais\i::__("Startup em fundação | Startup sem CNPJ")),
+        4 =>  array( 'name' => \MapasCulturais\i::__("Reunião")),
+        5 =>  array( 'name' => \MapasCulturais\i::__("Mostra")),
+        6 =>  array( 'name' => \MapasCulturais\i::__("Convenção")),
+        7 =>  array( 'name' => \MapasCulturais\i::__("Ciclo")),
+        8 =>  array( 'name' => \MapasCulturais\i::__("Programa")),
+        9 =>  array( 'name' => \MapasCulturais\i::__("Edital")),
+        10 => array( 'name' => \MapasCulturais\i::__("Concurso")),
+        11 => array( 'name' => \MapasCulturais\i::__("Exposição")),
+        12 => array( 'name' => \MapasCulturais\i::__("Jornada")),
+        13 => array( 'name' => \MapasCulturais\i::__("Exibição")),
+        14 => array( 'name' => \MapasCulturais\i::__("Feira")),
+        15 => array( 'name' => \MapasCulturais\i::__("Intercâmbio Cultural")),
+        16 => array( 'name' => \MapasCulturais\i::__("Capacitação")),
+        18 => array( 'name' => \MapasCulturais\i::__("Seminário")),
+        19 => array( 'name' => \MapasCulturais\i::__("Congresso")),
+        20 => array( 'name' => \MapasCulturais\i::__("Palestra")),
+        21 => array( 'name' => \MapasCulturais\i::__("Simpósio")),
+        22 => array( 'name' => \MapasCulturais\i::__("Fórum")),
+        23 => array( 'name' => \MapasCulturais\i::__("Curso")),
+        24 => array( 'name' => \MapasCulturais\i::__("Oficina")),
+        25 => array( 'name' => \MapasCulturais\i::__("Jornada")),
+        26 => array( 'name' => \MapasCulturais\i::__("Conferência Pública Setorial")),
+        27 => array( 'name' => \MapasCulturais\i::__("Conferência Pública Nacional")),
+        28 => array( 'name' => \MapasCulturais\i::__("Conferência Pública Estadual")),
+        29 => array( 'name' => \MapasCulturais\i::__("Conferência Pública Municipal")),
+        35 => ['name' => \MapasCulturais\i::__("Inscrições")],
+        121 => ['name' => \MapasCulturais\i::__("Pesquisa")],
+        122 => ['name' => \MapasCulturais\i::__("Consulta")]
+    )
     
     /* EXEMPLOS DE METADADOS:
 

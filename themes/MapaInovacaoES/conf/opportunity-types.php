@@ -4,17 +4,6 @@ use MapasCulturais\Utils;
 /**
  * See https://github.com/Respect/Validation to know how to write validations
  */
-
-function compareNamesOpportunity ($item1, $item2) {
-    return strcmp($item1['name'], $item2['name']);
-}
-
-$items = array(
-    1 =>  array( 'name' => \MapasCulturais\i::__("5"))
-);
-
-uasort($items, 'compareNamesOpportunity');
-
 return array(
     'metadata' => array(
 
@@ -174,8 +163,44 @@ return array(
             }
         ),
     ),
-    'items' => $items,
-    
+    'items' => array(
+        1 =>  array( 'name' => \MapasCulturais\i::__("Festival")),
+        2 =>  array( 'name' => \MapasCulturais\i::__("Encontro")),
+        3 =>  array( 'name' => \MapasCulturais\i::__("Visita Técnica")),
+        4 =>  array( 'name' => \MapasCulturais\i::__("Reunião")),
+        5 =>  array( 'name' => \MapasCulturais\i::__("Mostra")),
+        6 =>  array( 'name' => \MapasCulturais\i::__("Convenção")),
+        7 =>  array( 'name' => \MapasCulturais\i::__("Ciclo")),
+        8 =>  array( 'name' => \MapasCulturais\i::__("Programa")),
+        9 =>  array( 'name' => \MapasCulturais\i::__("Edital")),
+        10 => array( 'name' => \MapasCulturais\i::__("Concurso")),
+        11 => array( 'name' => \MapasCulturais\i::__("Exposição")),
+        12 => array( 'name' => \MapasCulturais\i::__("Jornada")),
+        13 => array( 'name' => \MapasCulturais\i::__("Exibição")),
+        14 => array( 'name' => \MapasCulturais\i::__("Feira")),
+        15 => array( 'name' => \MapasCulturais\i::__("Intercâmbio Cultural")),
+        16 => array( 'name' => \MapasCulturais\i::__("Investimento")),
+        17 => array( 'name' => \MapasCulturais\i::__("Seminário")),
+        18 => array( 'name' => \MapasCulturais\i::__("Congresso")),
+        19 => array( 'name' => \MapasCulturais\i::__("Palestra")),
+        20 => array( 'name' => \MapasCulturais\i::__("Simpósio")),
+        21 => array( 'name' => \MapasCulturais\i::__("Fórum")),
+        22 => array( 'name' => \MapasCulturais\i::__("Curso")),
+        23 => array( 'name' => \MapasCulturais\i::__("Oficina")),
+        24 => array( 'name' => \MapasCulturais\i::__("Jornada")),
+        25 => array( 'name' => \MapasCulturais\i::__("Conferência Pública Setorial")),
+        26 => array( 'name' => \MapasCulturais\i::__("Conferência Pública Nacional")),
+        27 => array( 'name' => \MapasCulturais\i::__("Conferência Pública Estadual")),
+        28 => array( 'name' => \MapasCulturais\i::__("Conferência Pública Municipal")),
+        40 => array( 'name' => \MapasCulturais\i::__("Abaixo-assinado")),
+        41 => array( 'name' => \MapasCulturais\i::__("Campanhas")),
+        42 => array( 'name' => \MapasCulturais\i::__("Pesquisa")),
+        43 => array( 'name' => \MapasCulturais\i::__("Oportunidade de trabalho")),
+        44 => array( 'name' => \MapasCulturais\i::__("Outros eventos")),
+        45 => array( 'name' => \MapasCulturais\i::__("Outros tipos de inscrição")),
+
+
+    )
     /* EXEMPLOS DE METADADOS:
 
     'cnpj' => array(

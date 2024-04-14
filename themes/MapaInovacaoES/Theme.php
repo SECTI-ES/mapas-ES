@@ -35,7 +35,15 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme {
 
     function _init() {
         parent::_init();
-        
+        $app = App::i();
+
+        $app->hook('template(<<*>>.search-filter-event):begin', function () {
+            
+            echo '<div class="field"> hello';
+        });
+        $app->hook('template(<<*>>.search-filter-event):end', function () {
+            echo '</div>';
+        });
     }
     /*
     Pré função para fazer a troca do modo do site (mode escuro/dark e claro/light), caso seja necessária no futuro.

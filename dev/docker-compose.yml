@@ -20,7 +20,7 @@ services:
       - ../docker/local/config.d:/var/www/config/config.d
 
       # themes and plugins
-      - ../themes/MapaCulturalES:/var/www/src/themes/MapaCulturalES
+      - ../themes/MapaInovacaoES:/var/www/src/themes/MapaInovacaoES
       - ../plugins/MultipleLocalAuth:/var/www/src/plugins/MultipleLocalAuth
       
 
