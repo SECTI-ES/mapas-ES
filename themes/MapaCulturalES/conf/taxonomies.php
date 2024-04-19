@@ -1,8 +1,12 @@
 <?php
 use MapasCulturais\i;
+use MapasCulturais\App;
 
-$csvFileOcupacao = '/var/www/src/themes/MapaInovacaoES/conf/csv/ocupacao.csv'; 
-$csvFileAreaDeAtuacao = '/var/www//src/themes/MapaInovacaoES/conf/csv/areadeatuacao.csv'; 
+$app = App::i();
+
+$csvFileOcupacao = '/var/www/src/themes/' . $app->config['themes.active'] . '/conf/csv/ocupacao.csv'; 
+$csvFileAreaDeAtuacao = '/var/www/src/themes/' . $app->config['themes.active'] . '/conf/csv/areadeatuacao.csv';
+
 $restrictedTermsOcupacao = array();
 $restrictedTermsAreaDeAtuacao = array();
 

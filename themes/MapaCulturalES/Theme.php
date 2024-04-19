@@ -1,11 +1,9 @@
 <?php
-namespace MapaInovacaoES;
-
-use MapasCulturais\App;
+namespace MapaCulturalES;
 
 class Theme extends \MapasCulturais\Themes\BaseV2\Theme {
 
-    public $mode = 'light';
+    // public $mode = 'light';
     
     static function getThemeFolder() {
         return __DIR__;
