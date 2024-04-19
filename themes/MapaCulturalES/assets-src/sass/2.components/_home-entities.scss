@@ -1,0 +1,29 @@
+// @use '../0.settings/mixins' as *;
+// @import '../../../../BaseV2/assets-src/sass/2.components/_home-entities';
+
+.home-entities {
+    
+    &__content {
+        &--cards {
+            .card {
+                &__left {
+                    &--img{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        min-height: 100%;
+
+                        img {
+                            object-fit: cover;
+                            -o-object-fit: cover;
+                            width: 100%;
+                            min-height: 100%;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
