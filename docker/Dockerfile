@@ -1,4 +1,4 @@
-FROM hacklab/mapasculturais:7.3.31
+FROM hacklab/mapasculturais:7.3.51
 
 COPY themes /var/www/src/themes
 COPY plugins /var/www/src/plugins
@@ -10,3 +10,5 @@ WORKDIR /var/www
 COPY docker/common/config.d /var/www/config/common.d
 COPY docker/production/config.d /var/www/config/config.d
 COPY docker/common/timezone.ini /usr/local/etc/php/conf.d/timezone.ini
+
+RUN chown -R www-data:www-data /var/www/public/*
