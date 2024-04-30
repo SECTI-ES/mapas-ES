@@ -7,3 +7,4 @@ docker-data/private-files
 docker-data/*
 dumps/*
 mapasculturais.prod.env
+themes/MapaCulturalES/assets/css/*

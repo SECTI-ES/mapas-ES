@@ -2,8 +2,11 @@
 
 @import './0.settings/variables';
 @import '../../../BaseV2/assets-src/sass/theme-BaseV2';
+@import './0.settings/variables.root';
+
 @import './2.components/home-entities';
 @import './2.components/home-feature';
+@import './2.components/mc-header-menu';
 
 .mc-header-logo {
     max-width: 9rem;

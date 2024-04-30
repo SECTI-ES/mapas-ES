@@ -1,0 +1,136 @@
+// @use '../0.settings/mixins' as *;
+
+.mc-header-menu {
+
+    &--item {
+        &.home {
+            &:hover{
+                .icon {
+                    background-color: var(--mc-primary-500);
+                }
+                .label {
+                    color: var(--mc-primary-500);
+                }
+            }
+        }
+
+        &.project {
+            &:hover{
+                .icon {
+                    background-color: var(--mc-primary-500);
+                }
+                .label {
+                    color: var(--mc-primary-500);
+                }
+            }
+        }
+
+        &.space {
+            &:hover{
+                .icon {
+                    background-color: var(--mc-primary-500);
+                }
+                .label {
+                    color: var(--mc-primary-500);
+                }
+            }
+        }
+
+        &.event {
+            &:hover{
+                .icon {
+                    background-color: var(--mc-primary-500);
+                }
+                .label {
+                    color: var(--mc-primary-500);
+                }
+            }
+        }
+
+        &.agent {
+            .icon {
+                font-size: 14px;
+            }   
+            
+            &:hover{
+                .icon {
+                    background-color: var(--mc-primary-500);
+                }
+                .label {
+                    color: var(--mc-primary-500);
+                }
+            }
+        }
+
+        &.opportunity {
+            &:hover{
+                .icon {
+                    background-color: var(--mc-primary-500);
+                }
+                .label {
+                    color: var(--mc-primary-500);
+                }
+            }
+        }
+    }
+}
+
+// .action-opportunities .mc-header-menu--item.opportunity {
+// }
+
+.action {
+    &-projects {
+        .mc-header-menu--item.project{
+                .icon {
+                    background-color: var(--mc-primary-500);
+                }
+                .label {
+                    color: var(--mc-primary-500);
+                }   
+        }
+    }
+    
+    &-spaces {
+        .mc-header-menu--item.space{
+                .icon {
+                    background-color: var(--mc-primary-500);
+                }
+                .label {
+                    color: var(--mc-primary-500);
+                }   
+        }
+    }
+    
+    &-events {
+        .mc-header-menu--item.event{
+                .icon {
+                    background-color: var(--mc-primary-500);
+                }
+                .label {
+                    color: var(--mc-primary-500);
+                }   
+        }
+    }
+    
+    &-agents {
+        .mc-header-menu--item.agent{
+                .icon {
+                    background-color: var(--mc-primary-500);
+                }
+                .label {
+                    color: var(--mc-primary-500);
+                }   
+        }
+    }
+    
+    &-opportunities {
+        .mc-header-menu--item.opportunity{
+                .icon {
+                    background-color: var(--mc-primary-500);
+                }
+                .label {
+                    color: var(--mc-primary-500);
+                }   
+        }
+    }
+}
