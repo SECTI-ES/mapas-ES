@@ -1,13 +1,14 @@
 // @use 'sass:color';
 
-// :root {
-//     --mc-home-developers: #{$home-developers};
+:root {
+    --mc-gradient: #{$gradient};
+    // --mc-home-developers: #{$home-developers};
 //     --mc-home-entities: #{$home-entities};
 //     --mc-home-feature: #{$home-feature};
 //     --mc-home-map: #{$home-map};
 //     --mc-home-opportunities: #{$home-opportunities};
 //     --mc-home-register: #{$home-register};
-//     --mc-home-header-gradient: #{$home-header-gradient};
+    --mc-home-header-gradient: linear-gradient(to bottom left, rgba(255, 0, 110, 0.45), rgba(39, 0, 217, 0.45));
 //     --mc-agents-300: #{$agents-300};
 //     --mc-agents-500: #{$agents-500};
 //     --mc-agents-700: #{$agents-700};
@@ -83,4 +84,4 @@
 //     --mc-font-size-xs: #{$font-size-xs};
 //     --mc-font-size-xxs: #{$font-size-xxs};
 //     --mc-font-size-xxxs: #{$font-size-xxxs};
-// }
+}

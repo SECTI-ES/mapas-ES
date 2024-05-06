@@ -33,7 +33,6 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme {
 
     function _init() {
         parent::_init();
-
     }
     /*
     Pré função para fazer a troca do modo do site (mode escuro/dark e claro/light), caso seja necessária no futuro.

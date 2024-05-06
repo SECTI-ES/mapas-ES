@@ -1,74 +1,27 @@
 // @use '../0.settings/mixins' as *;
 
+.icon-menu {
+    height: 1.1em;
+    width: 1.1em;
+}
+
 .mc-header-menu {
-
     &--item {
-        &.home {
+        &.home, 
+        &.project, 
+        &.space, 
+        &.event, 
+        &.agent, 
+        &.opportunity 
+        {
             &:hover{
                 .icon {
-                    background-color: var(--mc-primary-500);
+                    background: var(--mc-gradient);
                 }
                 .label {
-                    color: var(--mc-primary-500);
-                }
-            }
-        }
-
-        &.project {
-            &:hover{
-                .icon {
-                    background-color: var(--mc-primary-500);
-                }
-                .label {
-                    color: var(--mc-primary-500);
-                }
-            }
-        }
-
-        &.space {
-            &:hover{
-                .icon {
-                    background-color: var(--mc-primary-500);
-                }
-                .label {
-                    color: var(--mc-primary-500);
-                }
-            }
-        }
-
-        &.event {
-            &:hover{
-                .icon {
-                    background-color: var(--mc-primary-500);
-                }
-                .label {
-                    color: var(--mc-primary-500);
-                }
-            }
-        }
-
-        &.agent {
-            .icon {
-                font-size: 14px;
-            }   
-            
-            &:hover{
-                .icon {
-                    background-color: var(--mc-primary-500);
-                }
-                .label {
-                    color: var(--mc-primary-500);
-                }
-            }
-        }
-
-        &.opportunity {
-            &:hover{
-                .icon {
-                    background-color: var(--mc-primary-500);
-                }
-                .label {
-                    color: var(--mc-primary-500);
+                    background: var(--mc-gradient);
+                    background-clip: text;
+                    color: transparent;
                 }
             }
         }
@@ -79,13 +32,28 @@
 // }
 
 .action {
+    &-index {
+        .mc-header-menu--item.home{
+                .icon {
+                    background: var(--mc-gradient);
+                }
+                .label {
+                    background: var(--mc-gradient);
+                    background-clip: text;
+                    color: transparent;
+                }   
+        }
+    }
+
     &-projects {
         .mc-header-menu--item.project{
                 .icon {
-                    background-color: var(--mc-primary-500);
+                    background: var(--mc-gradient);
                 }
                 .label {
-                    color: var(--mc-primary-500);
+                    background: var(--mc-gradient);
+                    background-clip: text;
+                    color: transparent;
                 }   
         }
     }
@@ -93,10 +61,12 @@
     &-spaces {
         .mc-header-menu--item.space{
                 .icon {
-                    background-color: var(--mc-primary-500);
+                    background: var(--mc-gradient);
                 }
                 .label {
-                    color: var(--mc-primary-500);
+                    background: var(--mc-gradient);
+                    background-clip: text;
+                    color: transparent;
                 }   
         }
     }
@@ -104,10 +74,12 @@
     &-events {
         .mc-header-menu--item.event{
                 .icon {
-                    background-color: var(--mc-primary-500);
+                    background: var(--mc-gradient);
                 }
                 .label {
-                    color: var(--mc-primary-500);
+                    background: var(--mc-gradient);
+                    background-clip: text;
+                    color: transparent;
                 }   
         }
     }
@@ -115,10 +87,12 @@
     &-agents {
         .mc-header-menu--item.agent{
                 .icon {
-                    background-color: var(--mc-primary-500);
+                    background: var(--mc-gradient);
                 }
                 .label {
-                    color: var(--mc-primary-500);
+                    background: var(--mc-gradient);
+                    background-clip: text;
+                    color: transparent;
                 }   
         }
     }
@@ -126,10 +100,12 @@
     &-opportunities {
         .mc-header-menu--item.opportunity{
                 .icon {
-                    background-color: var(--mc-primary-500);
+                    background: var(--mc-gradient);
                 }
                 .label {
-                    color: var(--mc-primary-500);
+                    background: var(--mc-gradient);
+                    background-clip: text;
+                    color: transparent;
                 }   
         }
     }

@@ -24,6 +24,8 @@ $secondary-500: #2700d9 !default;
 $secondary-300: lighten($secondary-500, $lightness-300) !default;
 $secondary-700: darken($secondary-500, $lightness-700) !default;
 
+$gradient: linear-gradient(to bottom left, #ff006e, #2700d9);
+
 // // Entities colors
 $seals-500: #171821 !default;
 $seals-300: lighten($seals-500, $lightness-300) !default;
@@ -73,7 +75,7 @@ $home-feature: #b73db6 !default;
 $home-register: #2700d9 !default;
 // $home-map: $white !default;
 // $home-developers: $gray-100 !default;
-$home-header-gradient: linear-gradient(to bottom left, #ff006e, #2700d9);
+// $home-header-gradient: $gradient; // por algum motivo, esta linha não sobrescreve --mc-home-header-gradient
 
 // Neutral colors
 $low-500: #171821 !default;
