@@ -1,6 +1,9 @@
 <?php
 namespace MapaCulturalES;
 
+use MapasCulturais\i;
+use MapasCulturais\app;
+
 class Theme extends \MapasCulturais\Themes\BaseV2\Theme {
 
     // public $mode = 'light';
@@ -33,6 +36,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme {
 
     function _init() {
         parent::_init();
+        $app = App::i();
+
+        // print_r($app->config);
+
     }
     /*
     Pré função para fazer a troca do modo do site (mode escuro/dark e claro/light), caso seja necessária no futuro.
