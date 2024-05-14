@@ -24,7 +24,7 @@ services:
       - ../plugins/MultipleLocalAuth:/var/www/src/plugins/MultipleLocalAuth
       - ../plugins/SettingsES:/var/www/src/plugins/SettingsES
 
-      - ../docker/dev:/var/www/dev
+      - ../docker/dev/start.sh:/var/www/dev/start.sh
       
 
     environment:
