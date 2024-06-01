@@ -1,0 +1,28 @@
+.iconify {
+    font-size: size(16);
+
+    &--link {
+        cursor: pointer;
+    }
+}
+
+.own {
+    height: 60%;
+}
+
+.panel-nav a{
+    &:focus, 
+    &:hover, 
+    &.active {
+        .own {
+            filter: invert(0%);
+        }
+    }
+}
+
+.main-footer__content, .panel-nav{
+    .own {
+        height: 18px;
+        filter: invert(100%);
+    }
+}
