@@ -96,29 +96,6 @@ $this->import('
                         </template>
                     </carousel>
                 </mc-tab>
-                <mc-tab v-if="projects.length > 0" label="<?= i::esc_attr__('Projetos') ?>" slug="projects">
-                    <carousel :settings="settings" :breakpoints="breakpoints">
-                        <slide v-for="entity in projects" :key="entity.__objectId">
-                            <entity-card :entity="entity" tag="h4" portrait slice-description>
-                                <template #title>
-                                    <mc-title tag="h2" :shortLength="80">{{entity.name}}</mc-title>
-                                </template>
-                                <template #labels>
-                                    <div :class="['entityType',  entity.__objectType+'__background']">
-                                        <mc-icon :entity="entity"></mc-icon>
-                                        <?= i::__('Projeto') ?>
-                                    </div>
-                                </template>
-                            </entity-card>
-                        </slide>
-
-                        <template v-if="projects.length > 1" #addons>
-                            <div class="actions">
-                                <navigation :slideWidth="368" />
-                            </div>
-                        </template>
-                    </carousel>
-                </mc-tab>
                 <mc-tab v-if="opportunities.length > 0" label="<?= i::esc_attr__('Oportunidades') ?>" slug="opportunities">
                     <carousel :settings="settings" :breakpoints="breakpoints">
                         <slide v-for="entity in opportunities" :key="entity.__objectId">
@@ -143,6 +120,29 @@ $this->import('
                     </carousel>
                 </mc-tab>
             </mc-tabs>
+            <mc-tab v-if="projects.length > 0" label="<?= i::esc_attr__('Projetos') ?>" slug="projects">
+                <carousel :settings="settings" :breakpoints="breakpoints">
+                    <slide v-for="entity in projects" :key="entity.__objectId">
+                        <entity-card :entity="entity" tag="h4" portrait slice-description>
+                            <template #title>
+                                <mc-title tag="h2" :shortLength="80">{{entity.name}}</mc-title>
+                            </template>
+                            <template #labels>
+                                <div :class="['entityType',  entity.__objectType+'__background']">
+                                    <mc-icon :entity="entity"></mc-icon>
+                                    <?= i::__('Projeto') ?>
+                                </div>
+                            </template>
+                        </entity-card>
+                    </slide>
+
+                    <template v-if="projects.length > 1" #addons>
+                        <div class="actions">
+                            <navigation :slideWidth="368" />
+                        </div>
+                    </template>
+                </carousel>
+            </mc-tab>
 
             <span v-if="entities.length <= 0" class="semibold">
                 <?= $this->text('destaques não encontrados', i::__('Nenhuma entidade em destaque foi encontrada.')); ?>
