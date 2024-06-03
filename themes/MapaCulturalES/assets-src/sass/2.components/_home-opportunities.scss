@@ -1,0 +1,61 @@
+.home-opportunities {
+	background-color: var(--mc-home-feature);
+
+	&__header {
+		color: var(--mc-high-500);
+	}
+	
+	&__content {
+		&.cards {
+			.actions {
+				width: 110%;
+				display: flex;
+				justify-content: space-between;
+				position: absolute;
+				left: size(-60);
+				top: calc(50% - size(24));
+	
+				@media (max-width: size(1300)) {
+					display: none;
+				}
+			}
+			.carousel {
+				&__viewport {
+					ol {
+						li{
+							.entity-card.portrait {
+								height: size(600);
+
+								.entity-card__header{
+									&.user-slot {
+										position: absolute;
+										top: size(8);
+										right: size(8);
+									}
+								}
+								.entity-card__content{
+									.terms{
+										max-height: size(50);
+										overflow: hidden;
+										word-break: break-word;
+									}
+									.entity-card__content--terms-tag{
+										max-height: size(75);
+										overflow: hidden;
+										word-break: break-word;
+									}
+								}
+							}
+						}
+					}
+					.entity-card__footer {
+						flex-direction: column;
+						position: absolute;
+						bottom: size(16);
+					}
+				}
+			}
+		}
+	
+	}	
+}
