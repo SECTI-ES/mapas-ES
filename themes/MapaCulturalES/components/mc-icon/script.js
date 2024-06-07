@@ -43,6 +43,10 @@ app.component('mc-icon', {
 
             if (icons[this.name])
                 return icons[this.name];
+            if(this.entity){
+                const e = this.entity;
+                return icons[`${e.__objectType}-${ e.type?.id || e.type}`] || icons[e.__objectType] || icons[e.__objectId];
+            }
             return '';
         },
         
@@ -51,10 +55,25 @@ app.component('mc-icon', {
 
             if (icons[this.name])
                 return 'true';
-            return 'false';
+            if(this.entity){
+                const e = this.entity;
+                if(icons[`${e.__objectType}-${ e.type?.id || e.type}`] || icons[e.__objectType] || icons[e.__objectId])
+                    return 'true';
+            }
+            return `false`;
         },
         
         alt() {
+            if(this.entity){
+                const e = this.entity;
+                const icons = $MAPAS.config.iconsUrl;
+                if(icons[`${e.__objectType}-${ e.type?.id || e.type}`])
+                    return `${e.__objectType}-${ e.type?.id || e.type} Icon`;
+                if(icons[e.__objectType])
+                    return `${e.__objectType} Icon`;
+                if(icons[e.__objectId])
+                    return `${e.__objectId} Icon`;
+            }
             return `${this.name} Icon`;
         }
     },

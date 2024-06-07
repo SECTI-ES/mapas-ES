@@ -5,6 +5,10 @@
 	
 	&__content {
 		&.cards {
+			.semibold{
+				color: var(--mc-high-500);
+			}
+
 			.tabs-component{
 				&__header{
 					color: var(--mc-high-500);
