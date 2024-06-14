@@ -1,24 +1,12 @@
-.home-feature {
+.home-opportunities {
+	background-color: var(--mc-home-feature);
+
 	&__header {
 		color: var(--mc-high-500);
 	}
 	
 	&__content {
 		&.cards {
-			.semibold{
-				color: var(--mc-high-500);
-			}
-
-			.tabs-component{
-				&__header{
-					color: var(--mc-high-500);
-				}
-
-				&__button--active::after{
-					background-color: var(--mc-high-500);
-				}
-			}
-
 			.actions {
 				width: 110%;
 				display: flex;

@@ -27,7 +27,7 @@ $this->import('
                     <div class="card__left">
                         <div class="card__left--content">
                             <div class="card__left--content-icon opportunity__background">
-                                <img class="icon" src="<?php $this->asset($app->config['icons.menu']['opportunities']) ?>" alt="SVG Icon Opportunities">
+                                <mc-icon name="opportunity"></mc-icon>
                             </div>                        
                             <div class="card__left--content-title">
                                 <label class="title">
@@ -54,7 +54,7 @@ $this->import('
                     <div class="card__left">
                         <div class="card__left--content">
                             <div class="card__left--content-icon event__background">
-                                <img class="icon" src="<?php $this->asset($app->config['icons.menu']['events']) ?>" alt="SVG Icon Events">
+                                <mc-icon name="event"></mc-icon>
                             </div>                        
                             <div class="card__left--content-title">
                                 <label class="title">
@@ -81,7 +81,7 @@ $this->import('
                     <div class="card__left">
                         <div class="card__left--content">
                             <div class="card__left--content-icon space__background">
-                                <img class="icon" src="<?php $this->asset($app->config['icons.menu']['spaces']) ?>" alt="SVG Icon Spaces">
+                                <mc-icon name="space"></mc-icon>
                             </div>                        
                             <div class="card__left--content-title">
                                 <label class="title">
@@ -108,7 +108,7 @@ $this->import('
                     <div class="card__left">
                         <div class="card__left--content">
                             <div class="card__left--content-icon agent__background">
-                                <img class="icon" src="<?php $this->asset($app->config['icons.menu']['agents']) ?>" alt="SVG Icon Agents">
+                                <mc-icon name="agent-2"></mc-icon>
                             </div>                        
                             <div class="card__left--content-title">
                                 <label class="title">
@@ -135,7 +135,7 @@ $this->import('
                     <div class="card__left">
                         <div class="card__left--content">
                             <div class="card__left--content-icon project__background">
-                                <img class="icon" src="<?php $this->asset($app->config['icons.menu']['projects']) ?>" alt="SVG Icon Projects">
+                                <mc-icon name="project"></mc-icon>
                             </div>                        
                             <div class="card__left--content-title">
                                 <label class="title">

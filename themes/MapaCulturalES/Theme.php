@@ -36,9 +36,15 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme {
 
     function _init() {
         parent::_init();
+
         $app = App::i();
 
-        // print_r($app->config);
+        $app->hook('app.init:after', function () {
+            foreach ($this->config['icons'] as $icon => $path) {
+                $this->config['iconsUrl'][$icon] = $this->view->asset($path, false, true);
+            //     // print_r($app->getHooks('asset(' . $path . '):url'));
+            }
+        });
 
     }
     /*

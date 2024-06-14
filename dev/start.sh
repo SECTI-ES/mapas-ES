@@ -1,51 +1,76 @@
 #!/bin/bash
 
+# como atualizar docker compose: https://docs.docker.com/compose/install/linux/#install-the-plugin-manually
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 CDIR=$( pwd )
 cd $DIR
 
-
-BUILD="0"
-DOWN="0"
 SLEEP_TIME="0"
+
+# Check if no parameters were given
+if [ $# -ne 1 ]; then
+    echo "  Parâmetro recebido inválido.
+    Execute o script com -h para ver opções.
+    "
+    exit 1
+fi
 
 if [ ! -d "../docker-data/postgres" ]; then
   SLEEP_TIME=15
 fi
 
-for i in "$@"
-do
-case $i in
-    -b|--build)
-            BUILD="1"
-	    shift
-    ;;
-    -d|--down)
-            DOWN="1"
-	    shift
-    ;;
-    -h|--help)
-    	    echo "
-	start-dev.sh [-b] [-d]
 
-    -b   | --build      builda a imagem Docker
-    -d   | --down       executa o docker-compose down antes do docker-compose run
+case $1 in
+   -b|--build)
+      docker compose up -d --build
+   ;;
+   -t| --terminal)
+      echo "Use Ctrl+D para sair do container"
+      docker exec -it dev-mapas-1  /bin/bash
+   ;;
+   -l| --logs)
+      echo "Use Ctrl+C para sair do container"
+      docker logs -f dev-mapas-1 
+   ;;
+   -d|--down)
+      docker compose down
+   ;;
+   -r | --remove)
+      docker volume prune -a
+      docker image prune
+      rm -rf ../docker-data
+      rm -rf ../themes/MapaCulturalES/assets/css
+   ;;
+   -rd | -dr)
+      docker compose down
+      docker volume prune -a
+      docker image prune
+      rm -rf ../docker-data
+      rm -rf ../themes/MapaCulturalES/assets/css
+   ;;
+   -h|--help)
+    	echo "
+   start.sh [ -b | -t | -d | -r | -rd | -h ]
+
+    -b   | --build      Builda a imagem Docker
+    -t   | --terminal   Abre o terminal do container dev-mapas-1, para ver e manipular arquivos
+    -l   | --logs       Abre os logs in real-time do container dev-mapas-1
+    -d   | --down       Executa o docker compose down
+    -r   | --remove     Remove os arquivos criados no build e não excluídos no down
+    -rd  | -dr          Executa docker compose down E remove os arquivos não excluídos
     -h   | --help       Imprime esta mensagem de ajuda
-    "
-    	    exit
-    ;;
+   "
+      exit
+   ;;
+   *)
+      echo "
+   Parâmetro inválido
+         
+   Veja -h para parâmetros válidos.
+   "
+      exit 1
+   ;;
 esac
-done
 
-if [ $BUILD = "1" ]; then
-   docker-compose build
-fi
-
-if [ $DOWN = "1" ]; then
-   docker-compose down
-fi
-
-docker-compose run --service-ports  mapas
-
-docker-compose down
 cd $CDIR
