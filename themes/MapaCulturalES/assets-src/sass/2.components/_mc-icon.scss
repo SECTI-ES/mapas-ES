@@ -27,8 +27,53 @@
     }
 }
 
-.mc-avatar--big.mc-avatar--icon.mc-avatar{
+.panel--entities-summary__card--header-icon{
+    .iconify{
+        color: var(--mc-white);
+    }
+}
+
+.mc-avatar{
+    &--big.mc-avatar--icon.mc-avatar{
+        .own{
+            height: 50%;
+        }
+    }
+
+    &--medium.mc-avatar--icon.mc-avatar {
+        .iconify{
+            color: var(--mc-white);
+            height: 100%;
+            width: 55%;
+        }
+    }
+}
+
+.entity-card__header.user-slot{
+    .entityType{
+        color: var(--mc-white);
+    }
     .own{
-        height: 50%;
+        width: 14%;
+    }
+}
+
+.panel-entity-card__header-actions{
+
+    height: 13%;
+
+    .card-actions--tag {
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .own{
+            max-width: 26px;
+        }
+
+        span{
+            color: var(--mc-white);
+        }
     }
 }
