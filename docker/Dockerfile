@@ -9,4 +9,5 @@ COPY plugins /var/www/src/plugins
 
 COPY docker/common/config.d /var/www/config/common.d
 COPY docker/production/config.d /var/www/config/config.d
+COPY docker/production/composer.json /var/www/composer.json
 COPY docker/common/timezone.ini /usr/local/etc/php/conf.d/timezone.ini
