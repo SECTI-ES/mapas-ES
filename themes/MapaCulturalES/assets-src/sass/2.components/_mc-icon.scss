@@ -49,7 +49,10 @@
     }
 }
 
-.entity-card__header.user-slot{
+.home-feature__content.cards .carousel__viewport ol li .entity-card.portrait .entity-card__header.user-slot{
+    width: 45%;
+    right: 1.5rem;
+
     .entityType{
         color: var(--mc-white);
     }
