@@ -6,6 +6,10 @@
 	}
 	
 	&__content {
+		span.semibold{
+			color: var(--mc-high-500);
+		}
+
 		&.cards {
 			.actions {
 				width: 110%;
@@ -24,7 +28,7 @@
 					ol {
 						li{
 							.entity-card.portrait {
-								height: size(600);
+								height: size(620);
 
 								.entity-card__header{
 									&.user-slot {
