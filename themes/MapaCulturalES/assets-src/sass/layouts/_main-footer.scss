@@ -1,0 +1,35 @@
+
+.main-footer {
+    &__content {
+        &--logos{
+            height: 30vh;
+            width: 20%;
+            list-style: none;
+            border-left: 1px solid var(--mc-gray-300);
+            padding-left: 40px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+
+            &-fapes-secti {
+                margin-top: 10px;
+                height: 60%;
+            }
+
+            &-site{
+                height: 30%;
+            }
+
+            &-fapes-secti img, &-site img{
+                height: 100%;
+            }
+
+            @media (max-width: size(800)) {
+                padding-left: 0;
+                border-left: none;
+                display: block;
+            }
+        }
+    }
+}
