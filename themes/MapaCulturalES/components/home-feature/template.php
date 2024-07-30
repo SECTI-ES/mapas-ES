@@ -106,7 +106,7 @@ $this->import('
                                 <template #labels>
                                     <div :class="['entityType',  entity.__objectType+'__background']">
                                         <mc-icon :entity="entity"></mc-icon>
-                                        <?= i::__('Oportunidades') ?>
+                                        <?= i::__('Oportunidade') ?>
                                     </div>
                                 </template>
                             </entity-card>

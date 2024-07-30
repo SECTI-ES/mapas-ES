@@ -21,5 +21,5 @@ return [
     "),
 
     "text:home-developers.title" => i::__("Alô desenvolvedores!"),
-    "text:home-developers.description" => i::__("Além disso, o Mapa de Inovação é um software livre, criado em parceria entre a hacklab/, secretarias de inovação, organizações não governamentais, empresas e coletivos que investem na plataforma. Você pode contribuir para o seu desenvolvimento através do GitHub.")
+    "text:home-developers.description" => i::__("Além disso, o Mapa de Inovação é um projeto em desenvolvimento com apoio da MCI, FAPES, SECTI e pelo Governo do Estado do Espírito Santo. É baseado no Mapas Culturais, um software livre, criado em parceria entre a hacklab/, secretarias de cultura, organizações não governamentais, empresas e coletivos que investem na plataforma. Você pode contribuir para o seu desenvolvimento através do GitHub.")
 ];
