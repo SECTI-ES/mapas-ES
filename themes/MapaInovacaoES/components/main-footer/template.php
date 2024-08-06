@@ -13,7 +13,7 @@ $config = $app->config['social-media'];
 <?php $this->applyTemplateHook("main-footer", "before")?>
 <div v-if="globalState.visibleFooter" class="main-footer">
     <?php $this->applyTemplateHook("main-footer", "begin")?>
-    <div class="main-footer__content">    
+    <div class="main-footer__content">
         <?php $this->applyTemplateHook("main-footer-links", "before")?>
         <div class="main-footer__content--links">
             <?php $this->applyTemplateHook("main-footer-links", "begin")?>
@@ -24,27 +24,27 @@ $config = $app->config['social-media'];
                 </li>
                 <li v-if="global.enabledEntities.opportunities">
                     <a href="<?= $app->createUrl('search', 'opportunities') ?>">
-                        <mc-icon name="opportunity"></mc-icon> <?php i::_e('Editais e oportunidades'); ?>
+                        <mc-icon name="opportunity"></mc-icon> <?php i::_e('editais e oportunidades'); ?>
                     </a>
                 </li>
                 <li v-if="global.enabledEntities.events">
                     <a href="<?= $app->createUrl('search', 'events') ?>">
-                        <mc-icon name="event"></mc-icon> <?php i::_e('Eventos'); ?>
+                        <mc-icon name="event"></mc-icon> <?php i::_e('eventos'); ?>
                     </a>
                 </li>
                 <li v-if="global.enabledEntities.agents">
                     <a href="<?= $app->createUrl('search', 'agents') ?>">
-                        <mc-icon name="agent"></mc-icon> <?php i::_e('Agentes'); ?>
+                        <mc-icon name="agent"></mc-icon> <?php i::_e('agentes'); ?>
                     </a>
                 </li>
                 <li v-if="global.enabledEntities.spaces">
                     <a href="<?= $app->createUrl('search', 'spaces') ?>">
-                        <mc-icon name="space"></mc-icon> <?php i::_e('Espaços'); ?>
+                        <mc-icon name="space"></mc-icon> <?php i::_e('espaços'); ?>
                     </a>
                 </li>
                 <li v-if="global.enabledEntities.projects">
                     <a href="<?= $app->createUrl('search', 'projects') ?>">
-                        <mc-icon name="project"></mc-icon> <?php i::_e('Projetos'); ?>
+                        <mc-icon name="project"></mc-icon> <?php i::_e('projetos'); ?>
                     </a>
                 </li>
             </ul>
@@ -72,38 +72,41 @@ $config = $app->config['social-media'];
                 <?php endif; ?>
             </ul>
     
-            <ul class="main-footer__content--links-group">
-                <li>
-                    <a><?php i::_e('Ajuda e privacidade'); ?></a>
-                </li>
-                
-                <li>
-                    <a href="<?= $app->createUrl('faq') ?>"><?php i::_e('Dúvidas frequentes'); ?></a>
-                </li>
-                
-            <?php if (count($app->config['module.LGPD']) > 0): ?>
-                <?php foreach ($app->config['module.LGPD'] as $slug => $cfg) : ?>
+                <ul class="main-footer__content--links-group">
                     <li>
-                        <a href="<?= $app->createUrl('lgpd', 'view', [$slug]) ?>"><?= $cfg['title'] ?></a>
+                        <a><?php i::_e('Ajuda e privacidade'); ?></a>
                     </li>
-                <?php endforeach ?>
-            <?php endif; ?>
-            </ul>
+                    
+                    <li>
+                        <a href="<?= $app->createUrl('faq') ?>"><?php i::_e('Dúvidas frequentes'); ?></a>
+                    </li>
+                    
+                <?php if (count($app->config['module.LGPD']) > 0): ?>
+                    <?php foreach ($app->config['module.LGPD'] as $slug => $cfg) : ?>
+                        <li>
+                            <a href="<?= $app->createUrl('lgpd', 'view', [$slug]) ?>"><?= $cfg['title'] ?></a>
+                        </li>
+                    <?php endforeach ?>
+                <?php endif; ?>
+                </ul>
             <?php $this->applyTemplateHook("main-footer-links", "end")?>
-
-            <?php $this->applyTemplateHook("main-footer-logo", "before")?>
-            <ul class="main-footer__content--logos">
-                <li class="main-footer__content--logos-site">
-                    <img src="<?php $this->asset($app->config['module.home']['home-footer-logo']) ?>" />
-                </li>
-
-                <li class="main-footer__content--logos-fapes-secti">
-                    <img src="<?php $this->asset($app->config['module.home']['home-footer-logos-fapes-secti']) ?>" />
-                </li>
-            </ul>
-            <?php $this->applyTemplateHook("main-footer-logo", "after")?>
         </div>
-        <?php $this->applyTemplateHook("main-footer-links", "after")?>      
+        <?php $this->applyTemplateHook("main-footer-links", "after")?>     
+
+        <?php $this->applyTemplateHook("main-footer-logo", "before")?>
+        <div class="main-footer__support">
+            <?php $this->part('footer-support-message') ?>
+        </div>
+        <div class="main-footer__content--logos">
+            <img class="site" src="<?php $this->asset($app->config['module.home']['home-footer-logo']) ?>" />
+
+            <img class="mci" src="<?php $this->asset($app->config['module.home']['home-footer-mci']) ?>" />
+
+            <img class="fapes" src="<?php $this->asset($app->config['module.home']['home-footer-fapes']) ?>" />
+
+            <img class="secti" src="<?php $this->asset($app->config['module.home']['home-footer-secti']) ?>" />
+        </div>
+        <?php $this->applyTemplateHook("main-footer-logo", "after")?> 
     </div>
     <?php $this->applyTemplateHook("main-footer-reg", "before")?>
     <div class="main-footer__reg">
