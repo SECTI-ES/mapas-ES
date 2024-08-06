@@ -1,0 +1,50 @@
+
+.main-footer {
+    &__content {
+        &--logos{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: row;
+            gap: size(30);
+            padding: size(40) size(56) 0 size(56);
+            border-top: 1px solid var(--mc-gray-300);
+            margin: 0 auto;
+            max-width: size(1170);
+
+            img.site{
+                max-width: 20%;
+            }
+
+            img.mci{
+                max-width: 12%;
+            }
+
+            img.fapes{
+                max-width: 25%;
+            }
+
+            img.secti{
+                max-width: 30%;
+            }
+
+            @media (max-width: size(1240)) {
+                margin: 0 4%;
+            }
+
+            @media (max-width: size(800)) {
+                padding-top: 0;
+                margin: 0;
+                border-top: none;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: size(40);
+
+                img.site, img.mci, img.secti, img.fapes{
+                    max-width: none;
+                    height: size(100);
+                }
+            }
+        }
+    }
+}

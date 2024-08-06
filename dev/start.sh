@@ -39,15 +39,17 @@ case $1 in
    -r | --remove)
       docker volume prune -a
       docker image prune
+      docker container prune
       rm -rf ../docker-data
-      rm -rf ../themes/MapaCulturalES/assets/css
+      rm -rf ../themes/MapaInovacaoES/assets/css
    ;;
    -rd | -dr)
       docker compose down
       docker volume prune -a
       docker image prune
+      docker container prune
       rm -rf ../docker-data
-      rm -rf ../themes/MapaCulturalES/assets/css
+      rm -rf ../themes/MapaInovacaoES/assets/css
    ;;
    -h|--help)
     	echo "

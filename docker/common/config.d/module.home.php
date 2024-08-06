@@ -8,7 +8,9 @@ return [
         'home-projects' => 'img/home-projects.jpg',
         'home-spaces' => 'img/home-spaces.jpg',
         'home-register' => 'img/home-header.jpg',
-        'home-footer-logos-fapes-secti' => 'img/home-footer-logos-fapes-secti.png',
+        'home-footer-fapes' => 'img/home-footer-fapes.png',
+        'home-footer-secti' => 'img/home-footer-secti.png',
+        'home-footer-mci' => 'img/home-footer-mci.png',
         'home-footer-logo' => 'icon/logo.png',
     ]
 ];

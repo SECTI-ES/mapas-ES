@@ -1,5 +1,5 @@
 <?php
-namespace MapaCulturalES;
+namespace MapaInovacaoES;
 
 use MapasCulturais\i;
 use MapasCulturais\app;
