@@ -2,33 +2,48 @@
 .main-footer {
     &__content {
         &--logos{
-            height: 250px;
-            width: 20%;
-            list-style: none;
-            border-left: 1px solid var(--mc-gray-300);
-            padding-left: 40px;
             display: flex;
-            justify-content: space-evenly;
             align-items: center;
-            flex-direction: column;
+            justify-content: space-evenly;
+            flex-direction: row;
+            gap: size(30);
+            padding: size(40) size(56) 0 size(56);
+            border-top: 1px solid var(--mc-gray-300);
+            margin: 0 auto;
+            max-width: size(1170);
 
-            &-fapes-secti {
-                margin-top: 10px;
-                height: 60%;
+            img.site{
+                max-width: 20%;
             }
 
-            &-site{
-                height: 30%;
+            img.mci{
+                max-width: 12%;
             }
 
-            &-fapes-secti img, &-site img{
-                height: 100%;
+            img.fapes{
+                max-width: 25%;
+            }
+
+            img.secti{
+                max-width: 30%;
+            }
+
+            @media (max-width: size(1240)) {
+                margin: 0 4%;
             }
 
             @media (max-width: size(800)) {
-                padding-left: 0;
-                border-left: none;
-                display: block;
+                padding-top: 0;
+                margin: 0;
+                border-top: none;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: size(40);
+
+                img.site, img.mci, img.secti, img.fapes{
+                    max-width: none;
+                    height: size(100);
+                }
             }
         }
     }
