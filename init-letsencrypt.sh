@@ -5,10 +5,10 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(mapa.cultura.es.gov.br)
+domains=(mapa-hm.inovacao.es.gov.br)
 rsa_key_size=4096
 data_path="./docker-data/certbot"
-email="sysadmin@hacklab.com.br" # Adding a valid address is strongly recommended
+email="salimsuhet@gmail.com" # Adding a valid address is strongly recommended
 staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits
 
 if [ -d "$data_path" ]; then
