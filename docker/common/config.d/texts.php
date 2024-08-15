@@ -14,7 +14,7 @@ return [
     // "text:home-entities.agents" => i::__("Aqui você pode encontrar todos os profissionais, empreendedores e entidades que estão registrados na plataforma. É uma rede de agentes que estão envolvidos na cena de inovação da região. Você também pode realizar o seu cadastro, bem como o de seus coletivos, equipes, instituições e empresas das quais faça parte."),
     // "text:home-entities.projects" => i::__("Este é o local onde você pode encontrar oportunidades de financiamento, eventos, convocatórias e editais de inovação criados, além de diversas iniciativas cadastradas pelos usuários da plataforma."),
 
-    "text:home-feature.description" => i::__("Confira as últimas novidades de cada uma das entidades de inovação"),
+    "text:home-feature.description" => i::__("Confira as últimas novidades de cada uma das entidades de inovação."),
 
     "text:home-register.title" => i::__("Faça seu cadastro e colabore com o Mapa da Inovação"),
     "text:home-register.description" => i::__("Colabore com a plataforma livre, colaborativa e interativa de mapeamento do cenário de inovação e instrumento de governança digital no aprimoramento da gestão pública, dos mecanismos de participação e da democratização do acesso às políticas de inovação promovidas pelo estado.

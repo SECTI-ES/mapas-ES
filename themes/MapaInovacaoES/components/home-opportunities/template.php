@@ -17,7 +17,7 @@ $this->import('
 			<label> <?= $this->text('title', i::__('Oportunidades do momento'))?> </label>
 		</div>        
 		<div class="home-opportunities__header description">
-			<label> <?= $this->text('description', i::__('Cadastre-se, participe de editais e oportunidade e concorra aos benefícios sem sair de casa'))?> </label>
+			<label> <?= $this->text('description', i::__('Cadastre-se, participe de editais e oportunidade e concorra aos benefícios sem sair de casa.'))?> </label>
 		</div>
 	</div>    
 	<div class="home-opportunities__content">

@@ -4,6 +4,7 @@
 @import '../../../BaseV2/assets-src/sass/theme-BaseV2';
 @import './0.settings/variables.root';
 
+@import './2.components/agent-data';
 @import './2.components/home-entities';
 @import './2.components/home-feature';
 @import './2.components/home-opportunities';
@@ -12,6 +13,4 @@
 
 @import './layouts/main-footer';
 
-.mc-header-logo {
-    max-width: 9rem;
-}
+@import './pages/spaces';
