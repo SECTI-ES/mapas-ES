@@ -20,7 +20,7 @@ $this->import('
             <label><?= $this->text('title', i::__('Em destaque')) ?></label>
         </div>
         <div class="home-feature__header description">
-            <label><?= $this->text('description', i::__('Confira os últimos destaques de cada uma das entidades')) ?></label>
+            <label><?= $this->text('description', i::__('Confira os últimos destaques de cada uma das entidades.')) ?></label>
         </div>
     </div>
     <div class="home-feature__content">

@@ -33,7 +33,7 @@ $this->import('
 
     <div class="entity-card__content">
         <div class="entity-card__content--occurrence-data">
-            <mc-icon name="event"></mc-icon> {{occurrence.starts.date('long')}} <?= i::_e('às') ?> {{occurrence.starts.time()}}
+            {{occurrence.starts.date('long')}} <?= i::_e('às') ?> {{occurrence.starts.time()}}
         </div>
         <div v-if="!hideSpace" class="entity-card__content--occurrence-space">
             <div class="link"><mc-icon class="link space__color" name="pin"></mc-icon></div>
