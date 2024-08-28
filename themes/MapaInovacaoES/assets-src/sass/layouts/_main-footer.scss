@@ -1,6 +1,19 @@
 
 .main-footer {
     &__content {
+        &--links{
+            max-width: size(760);
+
+            &-group{
+                li{
+                    font-size: size(12);
+                }
+                li:first-child{
+                    font-size: size(18);
+                }
+            }
+        }
+
         &--logos{
             display: flex;
             align-items: center;
@@ -10,26 +23,10 @@
             padding: size(40) size(56) 0 size(56);
             border-top: 1px solid var(--mc-gray-300);
             margin: 0 auto;
-            max-width: size(1170);
+            max-width: size(760);
 
-            img.site{
-                max-width: 20%;
-            }
-
-            img.mci{
-                max-width: 12%;
-            }
-
-            img.fapes{
-                max-width: 25%;
-            }
-
-            img.secti{
-                max-width: 30%;
-            }
-
-            @media (max-width: size(1240)) {
-                margin: 0 4%;
+            img{
+                height: size(50);
             }
 
             @media (max-width: size(800)) {
@@ -40,9 +37,9 @@
                 align-items: flex-start;
                 margin-bottom: size(40);
 
-                img.site, img.mci, img.secti, img.fapes{
+                img{
                     max-width: none;
-                    height: size(100);
+                    height: size(60);
                 }
             }
         }

@@ -24,27 +24,27 @@ $config = $app->config['social-media'];
                 </li>
                 <li v-if="global.enabledEntities.opportunities">
                     <a href="<?= $app->createUrl('search', 'opportunities') ?>">
-                        <mc-icon name="opportunity"></mc-icon> <?php i::_e('editais e oportunidades'); ?>
+                        <mc-icon name="opportunity"></mc-icon> <?php i::_e('Editais e oportunidades'); ?>
                     </a>
                 </li>
                 <li v-if="global.enabledEntities.events">
                     <a href="<?= $app->createUrl('search', 'events') ?>">
-                        <mc-icon name="event"></mc-icon> <?php i::_e('eventos'); ?>
+                        <mc-icon name="event"></mc-icon> <?php i::_e('Eventos'); ?>
                     </a>
                 </li>
                 <li v-if="global.enabledEntities.agents">
                     <a href="<?= $app->createUrl('search', 'agents') ?>">
-                        <mc-icon name="agent"></mc-icon> <?php i::_e('agentes'); ?>
+                        <mc-icon name="agent"></mc-icon> <?php i::_e('Agentes'); ?>
                     </a>
                 </li>
                 <li v-if="global.enabledEntities.spaces">
                     <a href="<?= $app->createUrl('search', 'spaces') ?>">
-                        <mc-icon name="space"></mc-icon> <?php i::_e('espaços'); ?>
+                        <mc-icon name="space"></mc-icon> <?php i::_e('Espaços'); ?>
                     </a>
                 </li>
                 <li v-if="global.enabledEntities.projects">
                     <a href="<?= $app->createUrl('search', 'projects') ?>">
-                        <mc-icon name="project"></mc-icon> <?php i::_e('projetos'); ?>
+                        <mc-icon name="project"></mc-icon> <?php i::_e('Projetos'); ?>
                     </a>
                 </li>
             </ul>

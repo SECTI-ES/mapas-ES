@@ -87,14 +87,14 @@ $high-300: lighten($high-500, $lightness-300) !default;
 $high-700: darken($high-500, $lightness-700) !default;
 
 // // FONTS
-// $font-body: 'Open Sans', sans-serif !default;
-// $font-headings: 'Open Sans', sans-serif !default;
-// $font-weight-bold: 700;
-// $font-weight-regular: 400;
-// $font-weight-semibold: 600;
-// $text-transform-lowercase: lowercase;
-// $text-transform-none: none;
-// $text-transform-uppercase: uppercase;
+$font-body: 'Satoshi', sans-serif !default;
+$font-headings: 'Satoshi', sans-serif !default;
+$font-weight-bold: 700;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$text-transform-lowercase: lowercase;
+$text-transform-none: none;
+$text-transform-uppercase: uppercase;
 
 // $font-size-xl: 3rem;
 // $font-size-lg: 2rem;
