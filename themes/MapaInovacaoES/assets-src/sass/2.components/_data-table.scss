@@ -1,0 +1,11 @@
+.vue3-easy-data-table__header th,
+.vue3-easy-data-table__body td {
+    font-family: var(--mc-font-body);
+}
+
+.vue3-easy-data-table__body td {
+    font-family: var(--mc-font-body);
+    &:first-child {
+        font-family: var(--mc-font-body);
+    }
+}

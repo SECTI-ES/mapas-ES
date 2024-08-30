@@ -1,0 +1,9 @@
+.entity-actions {
+    &__content {
+        &--groupBtn {
+            .button {
+                font-family: var(--mc-font-body);
+            }
+        }
+    }
+}

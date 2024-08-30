@@ -1,0 +1,23 @@
+.system-roles-modal {
+    .modal {
+        &__title {
+            font-family: var(--mc-font-headings);
+        }
+    }
+
+    .field label {
+        font-family: var(--mc-font-body);
+    }
+
+    &__select {
+        font-family: var(--mc-font-body);
+    }
+
+    &__title {
+        font-family: var(--mc-font-headings);
+    }
+
+    &__label {
+        font-family: var(--mc-font-body);
+    }
+}

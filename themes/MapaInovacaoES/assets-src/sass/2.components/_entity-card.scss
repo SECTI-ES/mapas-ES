@@ -1,0 +1,11 @@
+.panel-entity-card {
+	&__footer-actions {
+		.button {
+			font-family: var(--mc-font-body);
+
+			&.archive {
+				font-family: var(--mc-font-body);
+			}
+        }
+	}
+}

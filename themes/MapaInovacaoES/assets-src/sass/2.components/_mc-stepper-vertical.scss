@@ -1,0 +1,9 @@
+.evaluation {
+    &-section {
+        &__field &__label {
+            font-size: size(18);
+            font-family: var(--mc-font-body);
+            font-weight: 600;
+        }
+    }
+}
