@@ -32,11 +32,23 @@ $this->import('
         mc-tab
 ');
 
-$label = $this->isRequestedEntityMine() ? i::__('Meus eventos') : i::__('Evantos');
+if($this->isRequestedEntityMine()){
+    $label_init = i::__('Painel');
+    $url_init = $app->createUrl('panel', 'index');
+    
+    $label = i::__('Meus Eventos');
+    $url = $app->createUrl('panel', 'events');
+} else {
+    $label_init = i::__('Inicio');
+    $url_init = $app->createUrl('site', 'index');
+    
+    $label = i::__('Eventos');
+    $url = $app->createUrl('search', 'events');
+}
 $this->breadcrumb = [
-    ['label' => i::__('Painel'), 'url' => $app->createUrl('panel', 'index')],
-    ['label' => $label, 'url' => $app->createUrl('panel', 'events')],
-    ['label' => $entity->name, 'url' => $app->createUrl('event', 'edit', [$entity->id])],
+    ['label' => $label_init, 'url' => $url_init],
+    ['label' => $label, 'url' => $url],
+    ['label' => $entity->name, 'url' => $app->createUrl('agent', 'single', [$entity->id])],
 ];
 ?>
 
