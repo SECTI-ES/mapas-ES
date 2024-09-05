@@ -122,7 +122,7 @@ $this->import('
     <?php $this->applyTemplateHook('main-header', 'end') ?>
 </header>
 
-<?php if(getenv('APP_MODE') === 'treinamento'): ?>
+<?php if(getenv('APPMODE_TRAINING') === 'true'): ?>
 <div class="modo-treinamento">
         <h3>
             TREINAMENTO
