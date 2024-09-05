@@ -62,7 +62,7 @@ $this->breadcrumb = [
                 <entity-status :entity="entity"></entity-status>
                 <mc-card class="feature">
                     <template #title>
-                        <label><?php i::_e("Informações de Apresentação") ?></label>
+                        <label><?php i::_e("Informações de apresentação") ?></label>
                         <p><?php i::_e("Os dados inseridos abaixo serão exibidos para todos os usuários") ?></p>
                     </template>
                     <template #content>
