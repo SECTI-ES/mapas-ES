@@ -22,6 +22,7 @@ services:
       # themes and plugins
       - ../themes/MapaInovacaoES:/var/www/src/themes/MapaInovacaoES
       - ../plugins/MultipleLocalAuth:/var/www/src/plugins/MultipleLocalAuth
+      - ../plugins/Accessibility:/var/www/src/plugins/Accessibility
       - ../plugins/SettingsES:/var/www/src/plugins/SettingsES
 
       - ../docker/dev/start.sh:/var/www/dev/start.sh
