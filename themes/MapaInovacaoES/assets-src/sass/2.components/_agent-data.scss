@@ -1,7 +1,35 @@
+.controller-agent.action-edit.Agent-2.Agent-1 {
+    .data-subtitle {
+        font-family: var(--mc-font-body);
+    }
+}
+
 .controller-agent.action-edit {
+    .mc-card__title {
+        p {
+            font-family: var(--mc-font-headings);
+        }
+    }
+
     .input__label {
         input[type="checkbox"] {
+            font-family: var(--mc-font-body);
             margin-right: size(10);
+        }
+    }
+}
+
+.agent-data {
+    &__title,
+    &__secondTitle {
+        font-family: var(--mc-font-headings);
+    }
+
+    &__fields {
+        &--field {
+            label {
+                font-family: var(--mc-font-body);
+            }
         }
     }
 }

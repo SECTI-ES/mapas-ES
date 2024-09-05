@@ -1,0 +1,19 @@
+.user-accepted-terms {
+    &__privacy {
+        &--accept {
+            &-title {
+                &-box {
+                    .boxterm {
+                        &__list {
+                            &-subterm {
+                                &-content {
+                                    font-family: var(--mc-font-body);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

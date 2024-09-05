@@ -29,11 +29,23 @@ $this->import('
     mc-tab
 ');
 
-$label = $this->isRequestedEntityMine() ? i::__('Meus agentes') : i::__('Agentes');
+if($this->isRequestedEntityMine()){
+    $label_init = i::__('Painel');
+    $url_init = $app->createUrl('panel', 'index');
+    
+    $label = i::__('Meus Agentes');
+    $url = $app->createUrl('panel', 'agents');
+} else {
+    $label_init = i::__('Inicio');
+    $url_init = $app->createUrl('site', 'index');
+    
+    $label = i::__('Agentes');
+    $url = $app->createUrl('search', 'agents');
+}
 $this->breadcrumb = [
-    ['label' => i::__('Painel'), 'url' => $app->createUrl('panel', 'index')],
-    ['label' => $label, 'url' => $app->createUrl('panel', 'agents')],
-    ['label' => $entity->name, 'url' => $app->createUrl('agent', 'edit', [$entity->id])],
+    ['label' => $label_init, 'url' => $url_init],
+    ['label' => $label, 'url' => $url],
+    ['label' => $entity->name, 'url' => $app->createUrl('agent', 'single', [$entity->id])],
 ];
 ?>
 
@@ -48,7 +60,7 @@ $this->breadcrumb = [
                 <entity-status :entity="entity"></entity-status>
                 <mc-card class="feature">
                     <template #title>
-                        <label><?php i::_e("Informações de Apresentação") ?></label>
+                        <label><?php i::_e("Informações de apresentação") ?></label>
                         <p><?php i::_e("Os dados inseridos abaixo serão exibidos para todos os usuários") ?></p>
                     </template>
                     <template #content>

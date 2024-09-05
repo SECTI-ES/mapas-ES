@@ -1,0 +1,11 @@
+.entity-header {
+    &__single {
+        &--content {
+            .metadata {
+                &__id {
+                    font-family: var(--mc-font-body);;
+                }
+            }
+        }
+    }
+}

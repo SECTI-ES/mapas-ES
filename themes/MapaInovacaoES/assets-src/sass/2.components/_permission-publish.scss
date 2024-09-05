@@ -1,0 +1,15 @@
+.permission-publish {
+    &__label {
+        font-family: var(--mc-font-body);
+    }
+
+    .publish-fields {
+        .field-options {
+            .options {
+                .permission {
+                    font-family: var(--mc-font-body);
+                }
+            }
+        }
+    }
+}

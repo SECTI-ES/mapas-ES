@@ -1,0 +1,54 @@
+.error-page {
+    .error-card {
+        @media (max-width:size(800)) {
+            .message-error {
+                .text {
+                    font-family: var(--mc-font-body);
+                }
+            }
+        }
+
+        .content {
+            .left {
+                .error-footer {
+                    .btn {
+                        button {
+                            font-family: var(--mc-font-body);
+
+                        }
+
+                        @media (max-width:size(600)) {
+                            label {
+                                font-family: var(--mc-font-body);
+                            }
+                        }
+                    }
+                }
+
+                &__content {
+                    font-family: var(--mc-font-body);
+                }
+
+                .left__warning {
+                    font-family: var(--mc-font-body);
+
+                    @media (max-width: size(600)) {
+                        font-family: var(--mc-font-body);
+                    }
+                }
+
+                &__title {
+                    font-family: var(--mc-font-body);
+                }
+
+                &__message {
+                    font-family: var(--mc-font-body);
+
+                    @media (max-width: size(600)) {
+                        font-family: var(--mc-font-body);
+                    }
+                }
+            }
+        }
+    }
+}

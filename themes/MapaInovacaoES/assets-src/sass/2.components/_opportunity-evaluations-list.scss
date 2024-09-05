@@ -1,0 +1,68 @@
+.opportunity-evaluations-list {
+    &__container {
+        .act-button {
+            .label {
+                font-family: var(--mc-font-body);
+            }
+        }
+
+        &.isOpen {
+            .find {
+                .content {
+                    .button-filter {
+                        label {
+                            font-family: var(--mc-font-body);
+                        }
+                    }
+                }
+            }
+
+            .label-evaluation {
+                &__check {
+                    &--label {
+                        font-family: var(--mc-font-body);
+                    }
+                }
+            }
+
+            ul.evaluation-list {
+                li.evaluation-list__card {
+                    .link {
+                        .card {
+                            &-header {
+                                &__name {
+                                    font-family: var(--mc-font-body);
+                                }
+                            }
+
+                            &-content {
+                                &__middle {
+                                    .subscribe {
+                                        font-family: var(--mc-font-body);
+                                    }
+
+                                    .value {
+                                        font-family: var(--mc-font-body);
+                                    }
+                                }
+                            }
+                        }
+
+                        .card-state {
+                            .state,
+                            &label {
+                                font-family: var(--mc-font-body);
+                            }
+
+                            button {
+                                label {
+                                    font-family: var(--mc-font-body);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

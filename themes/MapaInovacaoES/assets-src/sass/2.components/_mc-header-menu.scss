@@ -21,8 +21,15 @@
     }
 }
 
-// .action-opportunities .mc-header-menu--item.opportunity {
-// }
+.modo-treinamento {
+    padding: 1vh;
+    background-color: #e2c224;
+    color: var(--mc-white);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .action {
     &-index {

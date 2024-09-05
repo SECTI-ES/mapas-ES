@@ -1,0 +1,38 @@
+.controller-panel.action-system-roles {
+    .panel-entity-card {
+        &__main {
+            .system-roles-card {
+                &__list {
+                    font-family: var(--mc-font-body);
+                }
+
+                &__users {
+                    font-family: var(--mc-font-body);
+                }
+            }
+        }
+
+        &__footer-actions {
+            .button.delete {
+                span {
+                    font-family: var(--mc-font-body);
+                }
+            }
+
+            @media (max-width: size(500)) {
+                .button.delete {
+                    span {
+                        font-family: var(--mc-font-body);
+                    }
+                }
+
+                .right {
+                    .button {
+                        font-family: var(--mc-font-body);
+                    }
+                }
+            }
+
+        }
+    }
+}
