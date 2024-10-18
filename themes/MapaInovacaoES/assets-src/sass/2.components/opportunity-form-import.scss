@@ -1,0 +1,21 @@
+.opportunity-form-import {
+    padding-bottom: size(19);
+
+    &--popover {
+        .popover__content {
+            .header-import {
+                &__title {
+                    font-family: var(--mc-font-headings);
+                }
+
+                &__label {
+                    font-family: var(--mc-font-body);
+                }
+            }
+        }
+    }
+
+    .import-buttons {
+        font-family: var(--mc-font-body);
+    }
+}

@@ -1,0 +1,34 @@
+.stepper-evaluations {
+    &__title {
+        font-family: var(--mc-font-headings);
+    }
+    .card {
+        &-evaluation {
+            &__content {
+                &--title {
+                    font-family: var(--mc-font-headings);
+                }
+
+                &--items {
+                    .phase {
+                        &__title {
+                            &--title {
+                                font-family: var(--mc-font-headings);
+                            }
+                        }
+                    }
+
+                    .period {
+                        &__label {
+                            font-family: var(--mc-font-body);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .out-evalution {
+        font-family: var(--mc-font-body);
+    }
+}

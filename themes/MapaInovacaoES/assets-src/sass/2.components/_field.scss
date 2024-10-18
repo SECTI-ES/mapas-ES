@@ -1,0 +1,13 @@
+.field {
+    &__error {
+        font-family: var(--mc-font-body);
+    }
+
+    .required {
+        font-family: var(--mc-font-body);
+    }
+
+    input, textarea, select {
+        font-family: var(--mc-font-body);
+    }
+}

@@ -1,14 +1,14 @@
 <?php 
 
 return [
-    'app.siteName' => 'Mapa Cultural ES',
-    'app.siteDescription' => 'O Mapa Cultural ES é uma plataforma livre, colaborativa e interativa de mapeamento do cenário cultural capixaba,',
+    'app.siteName' => 'Mapa da Inovação ES',
+    'app.siteDescription' => 'O Mapa de Inovação do Espírito Santo é uma plataforma livre, colaborativa e interativa que mapeia e promove o cenário de inovação no estado.',
 
-    'themes.active' => 'MapaCulturalES',
+    'themes.active' => 'MapaInovacaoES',
 
     'app.lcode' => 'pt_BR',
 
-    'maps.center' => [-19.6103423,-40.7865062], 
+    'maps.center' => [-19.6103423,-40.7865062],
     'maps.zoom.default' => 8,
 
     // colocar sigla do estado, ou código do ibge?

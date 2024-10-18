@@ -1,0 +1,25 @@
+.panel--pending-evaluations {
+    &__content {
+        .carousel {
+            &__slide {
+                .panel-entity-card {
+                    &__main {
+                        .type-evaluation {
+                            &__type {
+                                .entity-label {
+                                    label {
+                                        font-family: var(--mc-font-body);
+                                    }
+                                }
+                            }
+
+                            &__content {
+                                font-family: var(--mc-font-body);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

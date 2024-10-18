@@ -1,0 +1,9 @@
+.leaflet-popup {
+    .mc-map-card {
+        &__content {
+            &--info {
+                font-family: var(--mc-font-body);
+            }
+        }
+    }
+}

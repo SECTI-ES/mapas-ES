@@ -1,0 +1,41 @@
+body.base-v2 { // É necessário '!important' pois esta sobrescrevendo estilos definidos inline.
+@media (min-width: 900px) {
+        &.controller-search.action-events {
+
+            .create-occurrence__section--field.field .dp__menu.dp__menu_index {
+                top: 50px !important;
+                left: 0 !important;
+                transform: scale(0.67) !important;
+                transform-origin: top left;
+            }
+
+            .datepicker .dp__menu.dp__menu_index {
+                top: -174px !important;
+                left: -810px !important;
+                transform: scale(0.8) !important;
+                transform-origin: top left;
+
+                .dp__arrow {
+                    &_bottom, &_top {
+                        left: 100%;
+                    }
+                    
+                    &_top{
+                        top: 47%;
+                        transform: translate(-50%, -50%) rotate(135deg);
+                    }
+                    &_bottom{
+                        bottom: 50.5%;
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                    }
+                }
+            }
+        }
+        &.controller-event.action-edit .create-occurrence__section--field.field .dp__menu.dp__menu_index {
+            top: 50px !important;
+            left: 0 !important;
+            transform: scale(0.93) !important;
+            transform-origin: top left;
+        }
+    }
+}

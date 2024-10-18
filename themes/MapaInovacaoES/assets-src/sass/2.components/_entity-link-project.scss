@@ -1,0 +1,9 @@
+.entity-link-project {
+    &__edit {
+        &--btn {
+            .add-button {
+                font-family: var(--mc-font-body);
+            }
+        }
+    }
+}

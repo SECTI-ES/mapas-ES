@@ -1,0 +1,13 @@
+.opportunity-data-collection {
+    &__field {
+        .field {
+            &__title {
+                font-family: var(--mc-font-headings);
+            }
+        }
+    }
+
+    &__fields {
+        gap: size(32);
+    }
+}

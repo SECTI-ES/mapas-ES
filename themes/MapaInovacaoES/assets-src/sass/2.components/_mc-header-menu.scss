@@ -1,0 +1,112 @@
+.mc-header-menu {
+    &--item {
+        &.home, 
+        &.project, 
+        &.space, 
+        &.event, 
+        &.agent, 
+        &.opportunity 
+        {
+            &:hover{
+                .icon {
+                    background: var(--mc-gradient);
+                }
+                .label {
+                    background: var(--mc-gradient);
+                    background-clip: text;
+                    color: transparent;
+                }
+            }
+        }
+    }
+}
+
+.modo-treinamento {
+    padding: 1vh;
+    background-color: #e2c224;
+    color: var(--mc-white);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action {
+    &-index {
+        .mc-header-menu--item.home{
+                .icon {
+                    background: var(--mc-gradient);
+                }
+                .label {
+                    background: var(--mc-gradient);
+                    background-clip: text;
+                    color: transparent;
+                }   
+        }
+    }
+
+    &-projects {
+        .mc-header-menu--item.project{
+                .icon {
+                    background: var(--mc-gradient);
+                }
+                .label {
+                    background: var(--mc-gradient);
+                    background-clip: text;
+                    color: transparent;
+                }   
+        }
+    }
+    
+    &-spaces {
+        .mc-header-menu--item.space{
+                .icon {
+                    background: var(--mc-gradient);
+                }
+                .label {
+                    background: var(--mc-gradient);
+                    background-clip: text;
+                    color: transparent;
+                }   
+        }
+    }
+    
+    &-events {
+        .mc-header-menu--item.event{
+                .icon {
+                    background: var(--mc-gradient);
+                }
+                .label {
+                    background: var(--mc-gradient);
+                    background-clip: text;
+                    color: transparent;
+                }   
+        }
+    }
+    
+    &-agents {
+        .mc-header-menu--item.agent{
+                .icon {
+                    background: var(--mc-gradient);
+                }
+                .label {
+                    background: var(--mc-gradient);
+                    background-clip: text;
+                    color: transparent;
+                }   
+        }
+    }
+    
+    &-opportunities {
+        .mc-header-menu--item.opportunity{
+                .icon {
+                    background: var(--mc-gradient);
+                }
+                .label {
+                    background: var(--mc-gradient);
+                    background-clip: text;
+                    color: transparent;
+                }   
+        }
+    }
+}

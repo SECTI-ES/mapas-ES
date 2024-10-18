@@ -1,0 +1,15 @@
+.mc-summary-evaluate {
+    &__box,
+    .sent,
+    .started .completed,
+    .pending {
+        &--content {
+            h4 {
+                font-family: var(--mc-font-headings);
+            }
+            span {
+                font-family: var(--mc-font-body);
+            }
+        }
+    }
+}

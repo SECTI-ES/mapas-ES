@@ -1,0 +1,14 @@
+.registration-evaluation-actions {
+    &__buttons {
+        &__send {
+            background-color:var(--mc-high-500);
+            color: var(--mc-primary-500);
+            border-color:  var(--mc-primary-500);
+            &:hover {
+                background-color:var(--mc-primary-500);
+                color: var(--mc-high-500);
+                border-color: var(--mc-primary-500);
+            }
+        }
+    }
+}

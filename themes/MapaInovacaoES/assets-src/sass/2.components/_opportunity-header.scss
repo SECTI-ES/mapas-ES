@@ -1,0 +1,19 @@
+.opportunity-header {
+    &__content {
+        .left {
+            .title {
+                &__info {
+                    .data {
+                        font-family: var(--mc-font-body);
+                    }
+                }
+
+                @media (max-width: size(400)) {
+                    &__info {
+                        font-family: var(--mc-font-body);
+                    }
+                }
+            }
+        }
+    }
+}

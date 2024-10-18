@@ -1,0 +1,10 @@
+.entity-profile {
+    &__profile {
+        &--label {
+            &::before {
+                top: size(2);
+                left: size(-12);
+            }
+        }
+    }
+}    

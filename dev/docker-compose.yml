@@ -1,4 +1,3 @@
-version: '2'
 services:
   mapas:
     build:
@@ -16,13 +15,11 @@ services:
       - ../docker-data/private-files:/var/www/private-files
       - ../docker-data/logs:/var/www/var/logs
       
-      - ../docker/common/config.d:/var/www/config/common.d
       - ../docker/local/config.d:/var/www/config/config.d
 
-      # themes and plugins
-      - ../themes/MapaCulturalES:/var/www/src/themes/MapaCulturalES
-      - ../plugins/MultipleLocalAuth:/var/www/src/plugins/MultipleLocalAuth
-      - ../plugins/SettingsES:/var/www/src/plugins/SettingsES
+      # themes
+      - ../themes/MapaInovacaoES:/var/www/src/themes/MapaInovacaoES
+      - ../docker/dev/start.sh:/var/www/dev/start.sh
       
 
     environment:
