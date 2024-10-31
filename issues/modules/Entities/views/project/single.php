@@ -1,6 +1,7 @@
 <?php
 
 // ISSUE: links dos Breadcrumps
+// ISSUE 2: Ids dos Subprojetos - Linha 61
 
 use MapasCulturais\i;
 
@@ -57,7 +58,7 @@ foreach($entity->children as $children) {
 
 if($children_id ){
     $children_id  = implode(",", $children_id );
-}
+} else $children_id = "";
 
 ?>
 
