@@ -4,7 +4,7 @@
  * @var MapasCulturais\Themes\BaseV2\Theme $this
  */
 
-// ISSUE: links dos Breadcrumps
+// ISSUE: links dos Breadcrumbs
 
 use MapasCulturais\i;
 

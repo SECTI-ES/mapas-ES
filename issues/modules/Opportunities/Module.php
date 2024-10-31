@@ -1,6 +1,6 @@
 <?php
 
-// ISSUE: links dos Breadcrumps
+// ISSUE: links dos Breadcrumbs
 
 namespace Opportunities;
 

@@ -4,7 +4,7 @@
  * @var \MapasCulturais\App $app
  */
 
-// ISSUE: links dos Breadcrumps
+// ISSUE: links dos Breadcrumbs
 
 use MapasCulturais\i;
 

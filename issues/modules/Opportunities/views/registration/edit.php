@@ -5,7 +5,7 @@
  * @var \MapasCulturais\Entities\Registration $entity
  */
 
-// ISSUE: links dos Breadcrumps
+// ISSUE: links dos Breadcrumbs
 
 use MapasCulturais\i;
 

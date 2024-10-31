@@ -1,6 +1,6 @@
 <?php
 
-// ISSUE: links dos Breadcrumps
+// ISSUE: links dos Breadcrumbs
 // ISSUE 2: Ids dos Subprojetos - Linha 61
 
 use MapasCulturais\i;
