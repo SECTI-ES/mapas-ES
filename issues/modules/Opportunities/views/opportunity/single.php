@@ -60,7 +60,7 @@ if($this->isRequestedEntityMine()){
 $this->breadcrumb = [
     ['label' => $label_init, 'url' => $url_init],
     ['label' => $label, 'url' => $url],
-    ['label' => $entity->name, 'url' => $app->createUrl('agent', 'single', [$entity->id])],
+    ['label' => $entity->name, 'url' => $app->createUrl('opportunity', 'single', [$entity->id])],
 ];
 ?>
 <div class="main-app single single-opportunity">
