@@ -1,5 +1,7 @@
 <?php
 
+// ISSUE: links dos Breadcrumbs
+
 use MapasCulturais\i;
 
 $this->layout = 'entity';
@@ -103,7 +105,7 @@ $this->breadcrumb = [
                         <div class="divider"></div>
                         <div class="right">
                             <div class="grid-12">
-                                <entity-terms :entity="entity" taxonomy="funcao" editable classes="col-12" title="<?php i::_e('Informe sua função'); ?>"></entity-terms>
+                                <entity-terms :entity="entity" taxonomy="funcao" editable classes="col-12" title="<?php i::_e('Informe sua função na cultura'); ?>"></entity-terms>
                                 <entity-social-media :entity="entity" editable classes="col-12"></entity-social-media>
                             </div>
                         </div>
