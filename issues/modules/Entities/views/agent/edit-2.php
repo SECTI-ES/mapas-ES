@@ -1,12 +1,13 @@
 <?php
 
+// ISSUE: links dos Breadcrumbs
+
 use MapasCulturais\i;
 
 $this->layout = 'entity';
 
 $this->import('
-    confirm-before-exit
-    elderly-person
+    confirm-before-exit 
     entity-actions
     entity-admins
     entity-cover
@@ -22,14 +23,13 @@ $this->import('
     entity-related-agents
     entity-renew-lock
     entity-social-media
-    entity-terms
     entity-status
+    entity-terms
     mc-breadcrumb
     mc-card
     mc-container
     mc-tabs
     mc-tab
-
 ');
 
 if($this->isRequestedEntityMine()){
@@ -56,7 +56,7 @@ $this->breadcrumb = [
     <entity-renew-lock :entity="entity"></entity-renew-lock>
     <mc-breadcrumb></mc-breadcrumb>
     <entity-header :entity="entity" editable></entity-header>
-    
+
     <mc-tabs class="tabs" sync-hash>
         <?php $this->applyTemplateHook('tabs','begin') ?>
         <mc-tab label="<?= i::_e('Informações') ?>" slug="info">
@@ -71,7 +71,7 @@ $this->breadcrumb = [
                         <div class="left">
                             <div class="grid-12 v-bottom">
                                 <entity-cover :entity="entity" classes="col-12"></entity-cover>
-
+                                
                                 <div class="col-12 grid-12">
                                     <?php $this->applyTemplateHook('entity-info','begin') ?>
                                     <div class="col-3 sm:col-12">
@@ -82,29 +82,19 @@ $this->breadcrumb = [
                                     </div>
                                     <?php $this->applyTemplateHook('entity-info','end') ?>
                                 </div>
-                                
-                                <?php $this->applyTemplateHook('edit1-entity-info-taxonomie-area','before') ?>
-                                <entity-terms :entity="entity" taxonomy="area" editable classes="col-12" title="<?php i::_e('Áreas de atuação'); ?>"></entity-terms>
-                                <?php $this->applyTemplateHook('edit1-entity-info-taxonomie-area','after') ?>
 
-                                <?php $this->applyTemplateHook('edit1-entity-info-shortDescription','before') ?>
-                                <entity-field :entity="entity" classes="col-12" prop="shortDescription" label="<?php i::_e('Mini bio') ?>">
-                                    <template #info> 
-                                        <?php $this->info('cadastro -> cadastrando-usuario -> mini-bio') ?>
-                                    </template>
-                                </entity-field>
-                                <?php $this->applyTemplateHook('edit1-entity-info-shortDescription','after') ?>
-
-                                <?php $this->applyTemplateHook('edit1-entity-info-site','before') ?>
+                                <entity-field :entity="entity" classes="col-12" prop="shortDescription"></entity-field>
                                 <entity-field :entity="entity" classes="col-12" prop="site"></entity-field>
-                                <?php $this->applyTemplateHook('edit1-entity-info-site','after') ?>
                             </div>
                         </div>
                         <div class="divider"></div>
                         <div class="right">
                             <div class="grid-12">
-                                <entity-terms :entity="entity" taxonomy="funcao" editable classes="col-12" title="<?php i::_e('Informe sua função'); ?>"></entity-terms>
-                                <entity-social-media :entity="entity" editable classes="col-12"></entity-social-media>
+                                <?php $this->applyTemplateHook('edit2-entity-info-taxonomie-area','before') ?>
+                                <entity-terms :entity="entity" taxonomy="area" editable classes="col-12" title="<?php i::_e('Área de atuação'); ?>"></entity-terms>
+                                <?php $this->applyTemplateHook('edit2-entity-info-taxonomie-area','after') ?>
+
+                                <entity-social-media :entity="entity" classes="col-12" editable></entity-social-media>
                             </div>
                         </div>
                     </template>
@@ -112,17 +102,16 @@ $this->breadcrumb = [
                 <main>
                     <mc-card>
                         <template #title>
-                            <h3 class="bold"><?php i::_e("Dados Pessoais"); ?> <?php $this->info('cadastro -> configuracoes-entidades -> dados-pessoais') ?></h3>
-                            <p><?php i::_e("Não se preocupe, esses dados não serão exibidos publicamente."); ?></p>
+                            <label><?php i::_e("Dados do Agente Coletivo"); ?></label>
+                            <p class="data-subtitle"><?php i::_e("Os dados inseridos abaixo serão registrados apenas no sistemas e não serão exibidos publicamente") ?></p>
                         </template>
                         <template #content>
                             <div class="grid-12">
-                                <entity-field :entity="entity" classes="col-12" prop="nomeSocial" label="<?= i::__('Nome Social') ?>"></entity-field>
-                                <entity-field :entity="entity" classes="col-12" prop="nomeCompleto" label="<?= i::__('Nome Completo') ?>"></entity-field>
+                                <entity-field :entity="entity" classes="col-9 sm:col-12" prop="name" label="<?php i::_e('Nome fantasia ou razão social') ?>"></entity-field>
                                 <entity-field v-if="global.auth.is('admin')" :entity="entity" prop="type" @change="entity.save(true).then(() => global.reload())" classes="col-12"></entity-field>
-                                <entity-field :entity="entity" classes="col-12" prop="cpf"></entity-field>
-                                <entity-field :entity="entity" classes="col-12" prop="cnpj" label="<?= i::__('MEI (CNPJ do MEI)') ?>"></entity-field>
-                                <entity-field :entity="entity" classes="col-12" prop="emailPrivado" label="<?= i::__('E-mail pessoal') ?>"></entity-field>
+                                <entity-field :entity="entity" classes="col-12" prop="cnpj" label="CNPJ"></entity-field>
+                                <entity-field :entity="entity" classes="col-12" prop="dataDeNascimento" label="<?= i::__('Data de fundação') ?>"></entity-field>
+                                <entity-field :entity="entity" classes="col-12" prop="emailPrivado" label="<?= i::__('E-mail privado ') ?>"></entity-field>
                                 <entity-field :entity="entity" classes="col-12" prop="telefonePublico" label="<?= i::__('Telefone público com DDD') ?>"></entity-field>
                                 <entity-field :entity="entity" classes="col-12" prop="emailPublico" label="<?= i::__('E-mail público') ?>"></entity-field>
                                 <entity-field :entity="entity" classes="col-6 sm:col-12" prop="telefone1" label="<?= i::__('Telefone privado 1 com DDD') ?>"></entity-field>
@@ -134,36 +123,16 @@ $this->breadcrumb = [
                     </mc-card>
                     <mc-card>
                         <template #title>
-                            <h3 class="bold"><?php i::_e("Dados pessoais sensíveis"); ?> <?php $this->info('cadastro -> configuracoes-entidades -> dados-pessoais-sensiveis') ?></h3>
-                            <p class="data-subtitle"><?php i::_e("Os dados inseridos abaixo serão registrados apenas no sistemas e não serão exibidos publicamente"); ?></p>
-                        </template>
-                        <template #content>
-                            <div class="grid-12">
-                                <entity-field :entity="entity" classes="col-6 sm:col-12" prop="dataDeNascimento" label="<?= i::__('Data de Nascimento') ?>"></entity-field>
-                                <elderly-person :entity="entity" ></elderly-person>
-                                <entity-field :entity="entity" classes="col-6 sm:col-12" prop="genero" label="<?= i::__('Selecione o Gênero') ?>"></entity-field>
-                                <entity-field :entity="entity" classes="col-6 sm:col-12" prop="orientacaoSexual" label="<?= i::__('Selecione a Orientação Sexual') ?>"></entity-field>
-                                <entity-field :entity="entity" classes="col-6 sm:col-12" prop="raca" label="<?= i::__('Selecione a Raça/Cor') ?>"></entity-field>
-                                <entity-field :entity="entity" classes="col-6 sm:col-12" prop="escolaridade" label="<?= i::__('Selecione a sua Escolaridade') ?>"></entity-field>
-                                <entity-field :entity="entity" classes="col-6 sm:col-12" prop="agenteItinerante" label="<?= i::__('É agente itinerante?') ?>"></entity-field>
-                                <entity-field :entity="entity" classes="col-12" prop="pessoaDeficiente" class="pcd col-12" label="<?= i::__('Pessoa com Deficiência') ?>"></entity-field>
-                                <entity-field :entity="entity" classes="col-12" prop="comunidadesTradicional" label="<?= i::__('Comunidades tradicionais') ?>"></entity-field>
-                                <entity-field :entity="entity" classes="col-12" prop="comunidadesTradicionalOutros" label="<?= i::__('Não encontrou sua comunidade Tradicional') ?>"></entity-field>
-                            </div>
-                        </template>
-                    </mc-card>
-                    <mc-card>
-                        <template #title>
-                            <label><?php i::_e("Informações públicas"); ?></label>
+                            <label><?php i::_e("informações públicas"); ?></label>
                             <p><?php i::_e("Os dados inseridos abaixo assim como as informações de apresentação também são exibidos publicamente"); ?></p>
                         </template>
                         <template #content>
                             <div class="grid-12">
                                 <entity-field :entity="entity" classes="col-12" prop="longDescription" editable></entity-field>
-                                <entity-files-list :entity="entity" classes="col-12" group="downloads" title="<?php i::_e('Adicionar arquivos para download'); ?>" editable></entity-files-list>
+                                <entity-files-list :entity="entity" classes="col-12" group="downloads" title="Adicionar arquivos para download" editable></entity-files-list>
                                 <entity-links :entity="entity" classes="col-12" title="<?php i::_e('Adicionar links'); ?>" editable></entity-links>
-                                <entity-gallery-video :entity="entity" classes="col-12" title="<?php i::_e('Adicionar vídeos') ?>" editable></entity-gallery-video>
-                                <entity-gallery :entity="entity" classes="col-12" title="<?php i::_e('Adicionar fotos na galeria') ?>" editable></entity-gallery>
+                                <entity-gallery-video title="<?php i::_e('Adicionar vídeos') ?>" :entity="entity" classes="col-12" editable></entity-gallery-video>
+                                <entity-gallery title="<?php i::_e('Adicionar fotos na galeria') ?>" :entity="entity" classes="col-12" editable></entity-gallery>
                             </div>
                         </template>
                     </mc-card>
@@ -173,9 +142,9 @@ $this->breadcrumb = [
                         <template #content>
                             <div class="grid-12">
                                 <entity-admins :entity="entity" classes="col-12" editable></entity-admins>
-                                <entity-related-agents :entity="entity" classes="col-12" editable></entity-related-agents>
                                 <entity-terms :entity="entity" taxonomy="tag" classes="col-12" title="Tags" editable></entity-terms>
-                                <entity-owner :entity="entity" classes="col-12" title="Publicado por" editable></entity-owner>
+                                <entity-related-agents :entity="entity" classes="col-12" editable></entity-related-agents>
+                                <entity-owner :entity="entity" title="Publicado por" classes="col-12" editable></entity-owner>
                             </div>
                         </template>
                     </mc-card>

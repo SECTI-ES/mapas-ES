@@ -12,28 +12,6 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme {
         return __DIR__;
     }
 
-    /*
-    Esta função sobre-escreve o resovleFilename() da classe Theme para que seja possivel definir os arquivos de configuração das taxonomias em uma pasta dentro da pasta do tema (conf), sem ela, os arquivos precisarão estar 'soltos' dentro da pasta do tema.
-    */
-    function resolveFilename($folder, $file){
-        if(!substr($folder, -1) !== '/') $folder .= '/';
-
-        // arquivos da pasta /conf do tema
-        if(file_exists($this->getThemeFolder() . '/conf' . $folder . $file)){
-            return $this->getThemeFolder() . '/conf' . $folder . $file;
-        }
-
-        $path = $this->path->getArrayCopy();
-
-        foreach($path as $dir){
-            if(file_exists($dir . $folder . $file)){
-                return $dir . $folder . $file;
-            }
-        }
-
-        return null;
-    }
-
     function _init() {
         parent::_init();
 
@@ -46,7 +24,20 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme {
             }
         });
 
+        $app->hook('template(<<*>>.main-header):after', function () {
+            // if(true){    // Mostra barra de treinamento sempre
+            if(getenv('APPMODE_TRAINING') === 'true'){
+                echo '
+                    <div class="modo-treinamento">
+                        <h3>
+                            TREINAMENTO
+                        </h3>
+                    </div>
+                ';
+            }
+        });
     }
+
     /*
     Pré função para fazer a troca do modo do site (mode escuro/dark e claro/light), caso seja necessária no futuro.
     */
