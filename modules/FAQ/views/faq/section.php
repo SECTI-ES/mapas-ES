@@ -1,6 +1,6 @@
 <?php
 
- // ISSUE: Botão "Voltar" era desnecessário por conta dos Breadcrumb e apresentava erro nos props.
+ // Alteração: Botão "Voltar" era desnecessário por conta dos Breadcrumb e apresentava erro nos props.
 
 use MapasCulturais\App;
 use MapasCulturais\i;
