@@ -13,7 +13,7 @@ Em caso de vazamento de dados, estes podem causar danos significativos à pessoa
 
 #### **São dados mais íntimos e delicados, como:**
 
-* **Origem racial ou étnica:** Relacionada à descendência e cultura.
+* **Origem racial ou étnica:** Relacionada à descendência e à cultura.
 * **Convicção religiosa:** Crenças e práticas religiosas.
 * **Opinião política:** Ideologias e posicionamentos políticos.
 * **Dados de saúde:** Informações sobre condições médicas, tratamentos, etc.

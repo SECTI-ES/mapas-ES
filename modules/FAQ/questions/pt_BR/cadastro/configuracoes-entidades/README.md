@@ -1,3 +1,3 @@
 # Configurações das entidades
 
-Dúvidas frequêntes sobre as configurações das entidades
+Dúvidas frequentes sobre as configurações das entidades

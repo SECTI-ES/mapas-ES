@@ -1,4 +1,4 @@
-# Sou representante de outra pessoa cadastrada. Como posso ajudá-la para recupar sua senha?
+# Sou representante de outra pessoa cadastrada. Como posso ajudá-la para recuperar sua senha?
 
 - titular
 - cadastro

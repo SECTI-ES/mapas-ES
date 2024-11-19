@@ -5,7 +5,7 @@
 - localização
 - localização pública
 
-É o campo que define se a sua localização será exibida no *Mapas Culturais* de forma pública para todos os usuários.
+É o campo que define se a sua localização será exibida no *Mapa da Inovação* de forma pública para todos os usuários.
 
 &nbsp;
 

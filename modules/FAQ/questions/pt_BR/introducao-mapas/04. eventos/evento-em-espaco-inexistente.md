@@ -1,4 +1,4 @@
-# Meu evento irá ocorrer num espaço que não existe no Mapa Cultural. Posso criá-lo?
+# Meu evento irá ocorrer num espaço que não existe no Mapa da Inovação. Posso criá-lo?
 
 Você poderá criar o espaço caso seja o representante legal do mesmo. 
 

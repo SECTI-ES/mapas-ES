@@ -1,10 +1,10 @@
-# Meu espaço está criado mas outra pessoa é proprietário dela no Mapa Cultural. O que devo fazer?
+# Meu espaço está criado mas outra pessoa é proprietário dela no Mapa da Inovação. O que devo fazer?
 
 - espaço
 - criação
 - proprietário
 
-Se você identificou que outro usuário está como proprietário de um espaço que lhe pertence no Mapas Culturais, **siga estes passos:**
+Se você identificou que outro usuário está como proprietário de um espaço que lhe pertence no Mapa da Inovação, **siga estes passos:**
 
 * **Reúna a documentação:** Junte todos os documentos que comprovem que você é o legítimo proprietário do espaço em questão.
 * **Entre em contato com o suporte:** Explique a situação detalhadamente e envie os documentos comprobatórios.
@@ -18,4 +18,4 @@ Se você identificou que outro usuário está como proprietário de um espaço q
 
 ##### **Caso não queira envolver o suporte, tente entrar em contato com o usuário que está como proprietário e solicite a transferência da propriedade de forma amigável.**
 
-> **Lembre-se:** A plataforma **Mapas Culturais** visa garantir a autenticidade das informações. Por isso, é fundamental que a propriedade dos espaços esteja de acordo com a realidade.
+> **Lembre-se:** A plataforma **Mapa da Inovação** visa garantir a autenticidade das informações. Por isso, é fundamental que a propriedade dos espaços esteja de acordo com a realidade.

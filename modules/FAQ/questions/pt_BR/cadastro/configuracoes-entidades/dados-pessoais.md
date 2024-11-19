@@ -4,7 +4,7 @@
 - cadastro
 - dados pessoais
 
-Dados pessoais são todos os dados que te individualizam e te diferenciam de outras pessoas no *Mapas Culturais*.
+Dados pessoais são todos os dados que te individualizam e te diferenciam de outras pessoas no *Mapa da Inovação*.
 
 &nbsp;
 
