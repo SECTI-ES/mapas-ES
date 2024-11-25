@@ -1,3 +1,3 @@
-# Projetos
+# projetos no Mapa da Inovação
 
-Aqui você encontra informações sobre os Projetos no *Mapas Culturais*.
+Aqui você encontra informações sobre os projetos no Mapa da Inovação.

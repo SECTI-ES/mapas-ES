@@ -5,7 +5,7 @@
 - CNPJ
 - MEI
 
-o **MEI** serve para lhe identificar como um Microemreendedor Individual dentro do *Mapas Culturais*
+o **MEI** serve para lhe identificar como um MicroempreendedorIndividual dentro do *Mapa da Inovação*
 
 Você pode cadastrar seu CNPJ no cadastro do seu Perfil.
 
@@ -18,4 +18,4 @@ Você pode cadastrar seu CNPJ no cadastro do seu Perfil.
 * Preencha o campo **MEI**;
 * Clique em **Salvar** na barra inferior;
 
-> **Lempre-se:** O **MEI** não é um campo obrigatório
+> **Lembre-se:** O **MEI** não é um campo obrigatório
