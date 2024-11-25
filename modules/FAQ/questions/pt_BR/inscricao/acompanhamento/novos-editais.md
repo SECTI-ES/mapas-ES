@@ -1,4 +1,4 @@
-# Como saber se haverá novos editais ? 
+# Como saber se haverá novos editais? 
 
 - Oportunidades
 - Edital
