@@ -1,4 +1,4 @@
-# Posso inscriver outra pessoa num edital?
+# Posso inscrever outra pessoa num edital?
 
 **A inscrição é individual!** 
 

@@ -1,3 +1,3 @@
-# Mapas Culturais
+# Mapa da Inovação
 
-Aqui você encontra respostas sobre a plataforma Mapas Culturais
+Aqui você encontra respostas sobre o Mapa da Inovação

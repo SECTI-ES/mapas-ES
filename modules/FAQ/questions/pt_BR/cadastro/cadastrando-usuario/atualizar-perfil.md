@@ -5,13 +5,13 @@
 - atualização
 - perfil
 
-O **perfil** do seu agente é a sua identidade digital no *Mapas Culturais*. 
+O **perfil** do seu agente é a sua identidade digital no *Mapa da Inovação*. 
 
 &nbsp;
 
 #### **Como editar meu perfil:**
 
-* Faça login no *Mapas Culturais*;
+* Faça login no *Mapa da Inovação*;
 * No painel de controle, clique em **Acessar meu perfil**;
 * Na barra inferior, clique em **Editar agente**;
 * Faça suas modificações;
