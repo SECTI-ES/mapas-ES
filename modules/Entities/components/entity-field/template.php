@@ -63,7 +63,7 @@ $this->import('
         
         <template v-if="is('multiselect')">
            <div class="field__group">
-               <label class="input__label input__checkboxLabel input__multiselect" v-for="optionValue in description.optionsOrder">
+               <label class="input__label input__checkboxLabel input__multiselect" v-for="optionValue in description.optionsOrder.filter(option => option !== 'Coletivo')">
                    <input :checked="value?.includes(optionValue)" type="checkbox" :value="optionValue" @change="change($event)" :disabled="readonly || readonly"> {{description.options[optionValue]}} 
                 </label>
             </div>
