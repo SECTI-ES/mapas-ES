@@ -9,14 +9,14 @@ return [
         'SpamDetector',
 
         'SettingsES' => ['namespace' => 'SettingsES'],
-        //'Zammad' => [
-        //    'namespace' => 'Zammad',
-        //    'config' => [
-        //        'enabled' => true,
-        //        'url' => 'https://suporte.es.mapasculturais.com.br/assets/chat/chat.min.js',
-        //        'background' => '#F66968'
-        //    ]
-        //    ],
+        'Zammad' => [
+           'namespace' => 'Zammad',
+           'config' => [
+               'enabled' => true,
+	       'url' => env('ZAMMAD_URL', 'https://suporte.es.mapasculturais.com.br/assets/chat/chat.min.js'),
+               'background' => '#8338EC'
+            ]
+        ],
         'MapasBlame' => [
             'namespace' => 'MapasBlame',
             'config' => [
