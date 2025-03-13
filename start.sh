@@ -9,12 +9,10 @@ sudo docker-compose -f docker-compose.prod.yml exec mapasculturais chown -R www-
 sudo docker-compose -f docker-compose.prod.yml exec mapasculturais chown -R www-data:www-data /var/www/html/
 sudo docker-compose -f docker-compose.prod.yml exec mapasculturais chown -R www-data:www-data /var/www/var/
 sudo docker-compose -f docker-compose.prod.yml exec mapasculturais chown -R www-data:www-data /var/www/src/plugins/
-#sudo docker-compose -f docker-compose.prod.yml exec mapasculturais chown -R www-data:www-data /usr/local/etc/php/conf.d/timezone.ini
 sudo docker-compose -f docker-compose.prod.yml exec mapasculturais chown -R www-data:www-data /var/www/
 sudo docker-compose -f docker-compose.prod.yml exec mapasculturais chmod -R +w /var/www/html/assets
-#sudo docker-compose -f docker-compose.prod.yml exec --workdir /var/www mapasculturais sed -i '/\"MapasCulturais\\\\Themes\\\\\"/d' composer.json
-#sudo docker-compose -f docker-compose.prod.yml exec --workdir /var/www mapasculturais sed -i '/\"MapasCulturais\\\\Modules\\\\\"/d' composer.json
 sudo docker-compose -f docker-compose.prod.yml exec --workdir /var/www mapasculturais composer.phar require php-curl-class/php-curl-class
+sudo docker-compose -f docker-compose.prod.yml exec --workdir /var/www mapasculturais composer.phar require phpoffice/phpspreadsheet
 #sudo docker-compose -f docker-compose.prod.yml exec --workdir /var/www/src mapasculturais pnpm store prune 
 sudo docker-compose -f docker-compose.prod.yml exec --workdir /var/www/src mapasculturais pnpm --recursive install 
 sudo docker-compose -f docker-compose.prod.yml exec --workdir /var/www/src mapasculturais pnpm run build
