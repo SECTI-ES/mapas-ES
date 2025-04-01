@@ -5,7 +5,6 @@ COPY plugins /var/www/src/plugins
 COPY conf /var/www/src/conf
 COPY translations /var/www/src/translations
 
-COPY issues/ /var/www/src/
 COPY modules /var/www/src/modules
 
 # WORKDIR /var/www/src

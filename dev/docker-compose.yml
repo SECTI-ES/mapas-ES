@@ -21,7 +21,6 @@ services:
       - ../themes/MapaInovacaoES:/var/www/src/themes/MapaInovacaoES
       - ../docker/dev/start.sh:/var/www/dev/start.sh
       
-
     environment:
       - PENDING_PCACHE_RECREATION_INTERVAL=5
       - JOBS_INTERVAL=5

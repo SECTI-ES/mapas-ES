@@ -1,5 +1,7 @@
 <?php
 
+// ISSUE: links dos Breadcrumbs
+
 use MapasCulturais\i;
 
 $this->layout = 'entity';
