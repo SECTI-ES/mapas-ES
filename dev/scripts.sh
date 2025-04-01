@@ -40,7 +40,7 @@ case $1 in
       docker volume prune -a
       docker image prune
       docker container prune
-      rm -rf ../docker-data
+      # rm -rf ../docker-data
       rm -rf ../themes/MapaInovacaoES/assets/css
    ;;
    -rd | -dr)
@@ -48,7 +48,7 @@ case $1 in
       docker volume prune -a
       docker image prune
       docker container prune
-      rm -rf ../docker-data
+      # rm -rf ../docker-data
       rm -rf ../themes/MapaInovacaoES/assets/css
    ;;
    -h|--help)
