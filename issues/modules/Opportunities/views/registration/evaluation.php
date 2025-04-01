@@ -22,8 +22,6 @@ $this->import('
     registration-evaluation-info
 ');
 
-$opportunity = $entity->opportunity;
-
 if($this->isRequestedEntityMine()){
     $label_init = i::__('Painel');
     $url_init = $app->createUrl('panel', 'index');
@@ -40,12 +38,11 @@ if($this->isRequestedEntityMine()){
 $breadcrumb = [
     ['label' => $label_init, 'url' => $url_init],
     ['label' => $label, 'url' => $url],
-    ['label' => i::__('Minhas Avaliações'), 'url' => $app->createUrl('panel', 'evaluations')], // Checar esse link
-    ['label' => i::__('Lista de Avaliações'), 'url' => $app->createUrl('opportunity', 'allEvaluations')], // Checar esse link
+    ['label' => i::__('Minhas Avaliações'), 'url' => $app->createUrl('panel', 'evaluations')],
+    ['label' => i::__('Lista de Avaliações'), 'url' => $app->createUrl('opportunity', 'userEvaluations', [$entity->opportunity->id])]
 ];
 
 $breadcrumb[] = ['label' => i::__('Formulário de avaliação')];
-
 
 $this->breadcrumb = $breadcrumb;
 
