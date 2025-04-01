@@ -11,7 +11,7 @@ $this->import('
 ');
 ?>
 
-<div class="mc-summary-agent-info" :class="classes">
+<div class="mc-summary-agent-info" :class="classes" v-if="(opportunity && canSee('agentsSummary')) || (opportunity.useAgentRelationColetivo && opportunity.useAgentRelationColetivo !== 'dontUse')">
     <div v-if="opportunity && canSee('agentsSummary')" class="mc-summary-agent-info__section">
         <h3><?= i::__("Dados do proponente") ?></h3>
 
@@ -45,9 +45,9 @@ $this->import('
         <h3><?= i::__("Dados do coletivo") ?></h3>
 
         <div>
-            <img v-if="getAvatarRelatedEntity('coletivo')" :src="getAvatarRelatedEntity('coletivo')" />
+            <h4 v-if="colective" style="padding-bottom: 6px;">{{colective?.name}}</h4>
+            <img v-if="getAvatarRelatedEntity('coletivo')" :src="getAvatarRelatedEntity('coletivo')" height='200vh'/>
             <mc-icon v-if="!getAvatarRelatedEntity('coletivo')" name="agent"></mc-icon>
-            <span v-if="colective">{{colective?.name}}</span>
             <span v-if="!colective && (opportunity.useAgentRelationColetivo)"><?= i::__("Instituição não informada") ?></span>
         </div>
 
