@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 clear
 ROOT_DIRETORY="$(pwd)"
@@ -22,20 +22,21 @@ CONTAINER_DB=db-mapas
 
 CONTAINERS="$CONTAINER_MAPA $CONTAINER_REDIS $CONTAINER_MAILHOG $CONTAINER_DB"
 
-COLUMNS=1 
+COLUMNS=1
 PS3=$'\nSelecione: '
 select OPTIONS in \
-    "Criar Ambiente Local" \
+    "Start Ambiente Local" \
+    "Build Ambiente Local" \
     "Exibir Logs" \
     "Acessar Container" \
     "Parar Containers" \
     "Apagar Containers" \
     "Apagar Ambiente Local" \
-    "Sair"; do 
+    "Sair"; do
 
 case $OPTIONS in
 
-    "Criar Ambiente Local")
+    "Start Ambiente Local")
         clear
         sudo docker compose up -d
         echo ""
@@ -43,7 +44,18 @@ case $OPTIONS in
         echo "Ambiente pronto..."
         read -p "[Enter para continuar]"
         clear
-        COLUMNS=1 
+        COLUMNS=1
+        ;;
+
+    "Build Ambiente Local")
+        clear
+        sudo docker compose up -d --build
+        echo ""
+
+        echo "Ambiente pronto..."
+        read -p "[Enter para continuar]"
+        clear
+        COLUMNS=1
         ;;
 
     "Exibir Logs")
@@ -52,16 +64,16 @@ case $OPTIONS in
 
         sudo docker logs -f $CONTAINER_MAPA
 
-        COLUMNS=1 
+        COLUMNS=1
         ;;
 
     "Acessar Container")
         clear
         echo "Use Ctrl+D para sair do container"
-        
+
         sudo docker exec -it $CONTAINER_MAPA  /bin/bash
 
-        COLUMNS=1 
+        COLUMNS=1
         ;;
 
     "Parar Containers")
@@ -74,7 +86,7 @@ case $OPTIONS in
         echo "Containers paralisados, volumes mantidos."
         read -p "[Enter para continuar]"
         clear
-        COLUMNS=1 
+        COLUMNS=1
         ;;
 
     "Apagar Containers")
@@ -83,10 +95,10 @@ case $OPTIONS in
         sudo docker compose down
 
         echo ""
-        echo "Containers e volumes deletados." 
+        echo "Containers e volumes deletados."
         read -p "[Enter para continuar]"
         clear
-        COLUMNS=1 
+        COLUMNS=1
         ;;
 
     "Apagar Ambiente Local")
@@ -102,13 +114,13 @@ case $OPTIONS in
         echo "Ambiente apagado: Containers, Imagens, Volumes, Networks e pasta docker-data (menos certbot e nginx)."
         read -p "[Enter para continuar]"
         clear
-        COLUMNS=1 
+        COLUMNS=1
         ;;
-    
+
     "Sair")
         clear
         break
-        COLUMNS=1 
+        COLUMNS=1
         ;;
 esac
 done

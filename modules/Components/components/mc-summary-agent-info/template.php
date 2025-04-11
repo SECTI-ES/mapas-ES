@@ -7,7 +7,7 @@
 use MapasCulturais\i;
 
 $this->import('
-    mc-icon    
+    mc-icon
 ');
 ?>
 
@@ -47,7 +47,7 @@ $this->import('
         <div>
             <h4 v-if="colective" style="padding-bottom: 6px;">{{colective?.name}}</h4>
             <img v-if="getAvatarRelatedEntity('coletivo')" :src="getAvatarRelatedEntity('coletivo')" height='200vh'/>
-            <mc-icon v-if="!getAvatarRelatedEntity('coletivo')" name="agent"></mc-icon>
+            <!-- <mc-icon v-if="!getAvatarRelatedEntity('coletivo')" name="agent"></mc-icon> -->
             <span v-if="!colective && (opportunity.useAgentRelationColetivo)"><?= i::__("Instituição não informada") ?></span>
         </div>
 
