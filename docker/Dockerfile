@@ -1,4 +1,4 @@
-FROM hacklab/mapasculturais:7.5.33
+FROM hacklab/mapasculturais:7.5.39
 
 COPY themes /var/www/src/themes
 COPY plugins /var/www/src/plugins
@@ -8,7 +8,7 @@ COPY translations /var/www/src/translations
 COPY modules /var/www/src/modules
 
 # WORKDIR /var/www/src
-# RUN pnpm install --recursive && pnpm run build 
+# RUN pnpm install --recursive && pnpm run build
 # WORKDIR /var/www
 
 COPY docker/common/config.d /var/www/config/common.d
