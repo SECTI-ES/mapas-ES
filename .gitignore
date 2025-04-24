@@ -1,4 +1,5 @@
 #docker-data
+.vscode
 node_modules
 vendorcompose/local/dump.sql
 docker-data/public-files
