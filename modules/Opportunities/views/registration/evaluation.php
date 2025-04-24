@@ -25,13 +25,13 @@ $this->import('
 if($this->isRequestedEntityMine()){
     $label_init = i::__('Painel');
     $url_init = $app->createUrl('panel', 'index');
-    
+
     $label = i::__('Minhas oportunidades');
     $url = $app->createUrl('panel', 'opportunities');
 } else {
     $label_init = i::__('Inicio');
     $url_init = $app->createUrl('site', 'index');
-    
+
     $label = i::__('Oportunidades');
     $url = $app->createUrl('search', 'opportunities');
 }
@@ -72,7 +72,7 @@ if (isset($this->controller->data['user']) && $entity->opportunity->canUser("@co
                 </opportunity-evaluations-list>
             </aside>
 
-            <main class="col-6 grid-12">
+            <main class="col-6 grid-12" style="height: fit-content;">
                 <?php if ($entity->opportunity->evaluationMethod->slug === "documentary") : ?>
                     <div class="col-12">
                         <mc-alert type="warning"><?= i::__('Para iniciar a de avaliação documental, selecione um campo de dados abaixo') ?></mc-alert>
@@ -89,7 +89,7 @@ if (isset($this->controller->data['user']) && $entity->opportunity->canUser("@co
                 <section class="col-12 section">
                     <div class="col-12">
                         </div>
-                        
+
                         <div class="section__content">
                             <div class="card owner">
                             <?php $this->applyTemplateHook("registration-evaluation-view", 'before', ['entity' => $entity]) ?>
@@ -105,7 +105,7 @@ if (isset($this->controller->data['user']) && $entity->opportunity->canUser("@co
                     <div class="registration__actions">
                         <h4 class="regular primary__color"><?= i::__("Formulário de") ?> <strong><?= $entity->opportunity->evaluationMethod->name ?></strong></h4>
                         <registration-evaluation-info :entity="entity"></registration-evaluation-info>
-                        
+
                         <?php $this->part("{$entity->opportunity->evaluationMethod->slug}/evaluation-form"); ?>
                     </div>
                 </div>
