@@ -8,6 +8,7 @@ return [
         'Accessibility',
         'SpamDetector',
         'ValuersManagement',
+        'AccountConsolidator',
 
         'SettingsES' => ['namespace' => 'SettingsES'],
         'Zammad' => [

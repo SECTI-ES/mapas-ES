@@ -26,3 +26,6 @@
 [submodule "plugins/ValuersManagement"]
 	path = plugins/ValuersManagement
 	url = https://github.com/mapasculturais/plugin-ValuersManagement.git
+[submodule "plugins/AccountConsolidator"]
+	path = plugins/AccountConsolidator
+	url = https://github.com/mapasculturais/plugin-AccountConsolidator.git

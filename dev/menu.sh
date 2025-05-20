@@ -6,7 +6,7 @@ ROOT_DIRETORY="$(pwd)"
 clean_docker_data(){
     cd $ROOT_DIRETORY/docker-data
 
-    sudo rm -rf assets db-data logs private-files public-files
+    rm -rf assets db-data logs private-files public-files
 
     cd $ROOT_DIRETORY/dev
 }
@@ -38,7 +38,7 @@ case $OPTIONS in
 
     "Start Ambiente Local")
         clear
-        sudo docker compose up -d
+        docker compose up -d
         echo ""
 
         echo "Ambiente pronto..."
@@ -49,7 +49,7 @@ case $OPTIONS in
 
     "Build Ambiente Local")
         clear
-        sudo docker compose up -d --build
+        docker compose up -d --build
         echo ""
 
         echo "Ambiente pronto..."
@@ -62,7 +62,7 @@ case $OPTIONS in
         clear
         echo "Ctrl+C para fechar"
 
-        sudo docker logs -f $CONTAINER_MAPA
+        docker logs -f $CONTAINER_MAPA
 
         COLUMNS=1
         ;;
@@ -71,7 +71,7 @@ case $OPTIONS in
         clear
         echo "Use Ctrl+D para sair do container"
 
-        sudo docker exec -it $CONTAINER_MAPA  /bin/bash
+        docker exec -it $CONTAINER_MAPA  /bin/bash
 
         COLUMNS=1
         ;;
@@ -80,7 +80,7 @@ case $OPTIONS in
         clear
         echo "Parando $CONTAINERS..."
 
-        sudo docker container stop $CONTAINERS
+        docker container stop $CONTAINERS
 
         echo ""
         echo "Containers paralisados, volumes mantidos."
@@ -92,7 +92,7 @@ case $OPTIONS in
     "Apagar Containers")
         clear
 
-        sudo docker compose down
+        docker compose down
 
         echo ""
         echo "Containers e volumes deletados."
@@ -104,9 +104,9 @@ case $OPTIONS in
     "Apagar Ambiente Local")
         clear
 
-        sudo docker compose down --rmi 'all'
-        sudo docker volume prune -f
-        sudo docker network prune -f
+        docker compose down --rmi 'all'
+        docker volume prune -f
+        docker network prune -f
 
         clean_docker_data
 
