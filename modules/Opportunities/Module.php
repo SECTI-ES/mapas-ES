@@ -128,7 +128,7 @@ class Module extends \MapasCulturais\Module{
 
         $app->hook("entity(Registration).status(<<*>>)", function() use ($app) {
             $app->log->debug("Registration {$this->id} status changed to {$this->status}");
-            
+
             /** @var Registration $this */
             /** @var Opportunity $opportunity */
             $opportunity = $this->opportunity;
@@ -138,10 +138,10 @@ class Module extends \MapasCulturais\Module{
                 ], '10 seconds');
 
                 $opportunity = $opportunity->nextPhase;
-                
+
             } while ($opportunity);
         });
-        
+
         $app->hook("entity(RegistrationEvaluation).save:after", function() use ($app) {
             /** @var RegistrationEvaluation $this */
             $cache_key = "updateSummary::{$this->registration->opportunity->evaluationMethodConfiguration}";
@@ -152,7 +152,7 @@ class Module extends \MapasCulturais\Module{
                 ], '10 seconds');
                 $app->mscache->delete($cache_key);
             }
-            
+
         });
 
         // Método para que devolve se existe avaliações técnicas nas fases anteriores
@@ -181,7 +181,7 @@ class Module extends \MapasCulturais\Module{
         /**
          * Na publicação da oportunidade cria efetua o salvamento para de todas as fases
          * para que dessa maneira os jobs sejam criados.
-         * 
+         *
          * @todo pensar uma maneira de ativas os jobs sem necessidade de salvar as fases
          */
         $app->hook("entity(Opportunity).<<(un)?publish|(un)?archive|(un)?delete|destroy>>:after", function() use ($app){
@@ -235,7 +235,7 @@ class Module extends \MapasCulturais\Module{
             }
         });
 
-        
+
         $app->hook("entity(EvaluationMethodConfiguration).save:finish", function() use ($app){
             /** @var EvaluationMethodConfiguration $this */
             $this->scheduleJobs();
@@ -270,7 +270,7 @@ class Module extends \MapasCulturais\Module{
 
             }
         });
-        
+
           //Cria painel de prestação de contas
         $app->hook('GET(panel.opportunities)', function() use($app) {
             $this->requireAuthentication();
@@ -291,11 +291,11 @@ class Module extends \MapasCulturais\Module{
             $this->requireAuthentication();
 
             $this->entityClassName = "MapasCulturais\\Entities\\Registration";
-            
+
             $this->layout = "registration";
 
             $entity = $this->requestedEntity;
-            
+
             $this->layout = 'print-layout';
 
             $this->render("registration-print", ['entity' => $entity]);
@@ -344,15 +344,15 @@ class Module extends \MapasCulturais\Module{
                     ['label'=> i::__('Minhas oportunidades'), 'url' => $app->createUrl('panel', 'opportunities')],
                     ['label'=> $first_phase->name, 'url' => $app->createUrl('opportunity', 'edit', [$first_phase->id])]
                 ];
-            } 
-            
+            }
+
             if ($entity->isFirstPhase) {
                 $breadcrumb[] = ['label'=> i::__('Período de inscrição')];
             } else {
                 $breadcrumb[] = ['label'=> $entity->name];
             }
             $breadcrumb[] = ['label'=> $label];
-            
+
             $this->breadcrumb = $breadcrumb;
         });
 
@@ -392,6 +392,7 @@ class Module extends \MapasCulturais\Module{
             foreach($registrations as $reg) {
                 /** @var \MapasCulturais\Entities\Registration $reg */
                 $phases[$reg->opportunity->id] = $reg->jsonSerialize();
+                $phases[$reg->opportunity->id]['currentUserPermissions'] = $reg->getUserPermissions();
             }
 
             $this->jsObject['registrationPhases'] = $phases;
@@ -428,10 +429,10 @@ class Module extends \MapasCulturais\Module{
                     throw new Exception();
                 }
             }
-            
+
             $fields = array_merge((array) $opportunity->registrationFileConfigurations, (array) $opportunity->registrationFieldConfigurations);
 
-            usort($fields, function($a, $b) {                
+            usort($fields, function($a, $b) {
                 return $a->displayOrder <=> $b->displayOrder;
             });
 
@@ -555,8 +556,8 @@ class Module extends \MapasCulturais\Module{
         });
 
         $app->hook("entity(Registration).recreatePermissionCache:after", function(&$users) use ($app) {
-            /** 
-             * @var \MapasCulturais\Entities\Registration $this 
+            /**
+             * @var \MapasCulturais\Entities\Registration $this
              * @var \MapasCulturais\Entities\EvaluationMethodConfiguration $em
              */
 
@@ -597,6 +598,6 @@ class Module extends \MapasCulturais\Module{
             'label' => i::__('Publicar o nome dos avaliadores nos pareceres'),
             'type' => 'json',
         ]);
-           
+
     }
 }
