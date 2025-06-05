@@ -19,7 +19,7 @@ $this->import('
     opportunity-header
     registration-actions
     registration-form
-    request-agent-avatar 
+    request-agent-avatar
     registration-related-agents
     registration-related-space
     registration-related-project
@@ -68,7 +68,6 @@ $this->breadcrumb = $breadcrumb;
 ?>
 
 <div class="main-app registration edit">
-    <entity-renew-lock :entity="entity"></entity-renew-lock>
     <mc-breadcrumb></mc-breadcrumb>
     <opportunity-header :opportunity="entity.opportunity"></opportunity-header>
 
@@ -88,30 +87,30 @@ $this->breadcrumb = $breadcrumb;
 
         <mc-container>
             <main class="grid-12">
-                <registration-info :registration="entity" classes="col-12"></registration-info>                
-                
+                <registration-info :registration="entity" classes="col-12"></registration-info>
+
                 <section class="section">
                     <h2 class="section__title" id="main-info">
                         <?= i::__('Informações básicas') ?>
                     </h2>
                     <registration-autosave-notification :registration="entity"></registration-autosave-notification>
 
-                    <div class="section__content">                         
-                        <div class="card owner">                            
+                    <div class="section__content">
+                        <div class="card owner">
                             <div class="card__content">
                                 <div class="owner">
                                     <mc-avatar v-if="!entity.opportunity.requestAgentAvatar" :entity="entity.owner" size="small"></mc-avatar>
                                     <request-agent-avatar v-if="entity.opportunity.requestAgentAvatar" :entity="entity"></request-agent-avatar>
                                     <div class="owner__content">
                                         <div class="owner__content--title">
-                                            <h3 class="card__title"> 
-                                                <?= i::__('Agente responsável') ?> 
+                                            <h3 class="card__title">
+                                                <?= i::__('Agente responsável') ?>
                                             </h3>
                                             <div class="owner__name">
                                                 {{entity.owner.name}}
                                             </div>
                                         </div>
-                                        <div v-if="entity.opportunity.requestAgentAvatar" class="card__mandatory"> 
+                                        <div v-if="entity.opportunity.requestAgentAvatar" class="card__mandatory">
                                             <div class="obrigatory"> <?= i::__('*obrigatório') ?> </div>
                                         </div>
                                     </div>
