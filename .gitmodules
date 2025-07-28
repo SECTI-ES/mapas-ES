@@ -29,3 +29,6 @@
 [submodule "plugins/AccountConsolidator"]
 	path = plugins/AccountConsolidator
 	url = https://github.com/mapasculturais/plugin-AccountConsolidator.git
+[submodule "plugins/Metabase"]
+	path = plugins/Metabase
+	url = https://github.com/mapasculturais/plugin-Metabase.git
